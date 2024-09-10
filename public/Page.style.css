@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', sans-serif;
+  overflow: hidden; /* Hindari scrollbar jika video melebihi layar */
+  transition: background-color 300ms ease-in-out; /* Transisi background body */
+}
+
+.lobby-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar video tidak terdistorsi dan tetap proporsional */
+  z-index: -1; /* Menempatkan video di belakang konten */
+}
+
+.game-title-container {
+  position: absolute;
+  top: 10%; /* Posisi dari atas */
+  display: flex;
+  justify-content: center; /* Pusatkan secara horizontal */
+  width: 100%;
+}
+
+.game-title {
+  max-width: 30%; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto; /* Menjaga proporsi gambar */
+  image-rendering: pixelated; /* Efek pixelated seperti game jadul */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1; /* Pastikan konten berada di atas video */
+  transition: opacity 300ms ease-in-out; /* Transisi konten */
+}
+
+.status {
+  color: #48CFCB;
+  margin-top: 5px;
+  text-shadow:
+  -1px -1px 0 #000000,  
+  1px -1px 0 #000000,
+  -1px 1px 0 #000000,
+  1px 1px 0 #000000; /* Warna stroke */
+}
+
+.greetings-text {
+  color: rgb(255, 100, 100);
+  margin-top: 15%;
+  margin-bottom: 2%; /* Spasi di bawah teks */
+  text-shadow:
+  -1px -1px 0 #ffffff,  
+  1px -1px 0 #ffffff,
+  -1px 1px 0 #ffffff,
+  1px 1px 0 #ffffff; /* Warna stroke */
+}
+
+.startbtnimg {
+  width: 10%;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  animation: pulse 2s infinite ease-in-out; 
+}
+
+#game-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.login-section nav {
+  margin-top: 40px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0.5rem 0; /* Spasi antara item menu */
+}
+
+.link {
+  color: #0A97B0;
+  text-decoration: none;
+  text-shadow:
+  -1px -1px 0 #ffffff,  
+  1px -1px 0 #000000,
+  -1px 1px 0 #000000,
+  1px 1px 0 #ffffff; /* Warna stroke */
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* public/styles/orientation-warning.css */
+.orientation-warning {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 9999;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .game-title-container {
+    position: absolute;
+    top: 10%; /* Posisi dari atas */
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    width: 100%;
+  }
+  
+  .game-title {
+    max-width: 50%; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    height: auto; /* Menjaga proporsi gambar */
+    image-rendering: pixelated; /* Efek pixelated seperti game jadul */
+  }
+
+  .greetings-text {
+    font-size: 20px;
+  }
+}
+
+/* Styles for screens smaller than 480px */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
