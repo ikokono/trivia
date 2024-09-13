@@ -10,6 +10,7 @@ export default function Game() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [gameOver, setGameOver] = useState(false);
   const [answerOptions, setAnswerOptions] = useState([]);
+  const [leaderboard, setLeaderboard] = useState({});
 
   useEffect(() => {
     // Menghubungkan socket
@@ -21,10 +22,14 @@ export default function Game() {
       console.log(`Assigned to room: ${roomId}`);
     });
 
+    socket.on('leaderboardUpdate', (data) => {
+      setLeaderboard(data);
+    });
+
     // Mendengarkan event newQuestion dari server
     socket.on('newQuestion', (question) => {
       setQuestion(question);
-      setAnswerOptions(generateAnswerOptions(question));
+      setAnswerOptions(question.answers);
       setTimer(5); // Set timer to 5 seconds
       startTimer();
     });
@@ -45,15 +50,10 @@ export default function Game() {
       socket.off('newQuestion');
       socket.off('answerResult');
       socket.off('gameOver');
+      socket.off('leaderboardUpdate');
       socket.disconnect();
     };
   }, []);
-
-  const generateAnswerOptions = (question) => {
-    // Ganti dengan logika untuk membuat opsi jawaban berdasarkan pertanyaan
-    // Misalnya, untuk tujuan demonstrasi, kita hanya mengembalikan dua opsi
-    return [question.answer, "Incorrect Answer"]; // Tambahkan lebih banyak opsi sesuai pertanyaan
-  };
 
   const handleAnswer = (answer) => {
     setSelectedAnswer(answer);
@@ -71,6 +71,14 @@ export default function Game() {
         return prev - 1;
       });
     }, 1000);
+  };
+
+  const renderLeaderboard = () => {
+    return Object.entries(leaderboard).map(([socketId, progress]) => (
+      <p key={socketId}>
+        Player {socketId}: Question {progress.currentQuestion}, Correct Answers: {progress.correctAnswers}
+      </p>
+    ));
   };
 
   const autoAnswer = () => {
@@ -95,11 +103,13 @@ export default function Game() {
               <h3>Question: {question.question}</h3>
               <p>Time left: {timer}s</p>
               <div>
-                {answerOptions.map((option, index) => (
-                  <button key={index} onClick={() => handleAnswer(option)} disabled={timer === 0}>
-                    {option}
-                  </button>
-                ))}
+                <ul>
+                  {answerOptions.map((option, index) => (
+                    <li><button key={index} onClick={() => handleAnswer(option)} disabled={timer === 0}>
+                      {option}
+                    </button></li>
+                  ))}
+                </ul>
               </div>
               {selectedAnswer && <p>You answered: {selectedAnswer}</p>}
             </div>
@@ -108,13 +118,7 @@ export default function Game() {
           )}
           <div>
             <h3>Leaderboard</h3>
-            <ul>
-              {Object.entries(answers).map(([socketId, correct], index) => (
-                <li key={index}>
-                  {socketId}: {correct ? 'Correct' : 'Incorrect'}
-                </li>
-              ))}
-            </ul>
+            {renderLeaderboard()}
           </div>
         </div>
       )}
