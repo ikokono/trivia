@@ -21,14 +21,19 @@ body {
   justify-content: center;
 }
 
-#background-video {
+.background-gif-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Agar video tidak terdistorsi dan tetap proporsional */
-  z-index: -1; /* Menempatkan video di belakang konten */
+  z-index: -1;
+}
+
+.background-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .game-title-container {
@@ -182,3 +187,4 @@ button {
     padding: 10px;
   }
 }
+    

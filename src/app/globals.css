@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark Mode Theme */
+:root {
+  --background: #181818; /* Background for Dark Retro Mode */
+  --foreground: #f5f5f5; /* Text Color for Dark Retro Mode */
+  --primary: #d93d3d; /* Soft Red for Dark Retro Mode */
+  --secondary: #f5a3a3; /* Soft Pastel Pink for Dark Retro Mode */
+  --border: #d93d3d; /* Border/Accent for Dark Retro Mode */
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
 }
 
+/* Remove Switch Styles */
+/* Remove any related CSS classes for switch here */
+
+/* Utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+  

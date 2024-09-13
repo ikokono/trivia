@@ -1,14 +1,13 @@
 const { createServer } = require("node:http");
 const next = require("next");
 const { Server } = require("socket.io");
+const questionsDatabase = require("./database/questions.json");
 
 const dev = process.env.NODE_ENV !== "production";
 const hostname = "localhost";
 const port = 3000;
 const app = next({ dev, hostname, port });
 const handler = app.getRequestHandler();
-
-const questions = [{ "id": "1", "question": "Olahraga apa yang terkenal dengan pukulan smash?", "answers": ["Bulu tangkis", "Basket", "Renang", "Voli"], "correctAnswer": "Bulu tangkis" }, { "id": "2", "question": "Siapa pemain sepak bola Indonesia yang terkenal dengan julukan 'Si Anak Ajaib'?", "answers": ["Bambang Pamungkas", "Cristiano Ronaldo", "Lionel Messi", "Kaka"], "correctAnswer": "Bambang Pamungkas" }, { "id": "3", "question": "Berapa jumlah pemain dalam satu tim sepak bola?", "answers": ["10", "11", "12", "13"], "correctAnswer": "11" }, { "id": "4", "question": "Olahraga apa yang menggunakan raket dan kok?", "answers": ["Tenis", "Bulu tangkis", "Badminton", "Catur"], "correctAnswer": "Bulu tangkis" }, { "id": "5", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan persegi panjang?", "answers": ["Sepak bola", "Basket", "Voli", "Rugby"], "correctAnswer": "Sepak bola" }, { "id": "6", "question": "Olahraga apa yang terkenal dengan gerakan salto dan putaran?", "answers": ["Senam", "Renang", "Atletik", "Bulu tangkis"], "correctAnswer": "Senam" }, { "id": "7", "question": "Siapa pemain basket Indonesia yang terkenal dengan julukan 'The Big Boss'?", "answers": ["Dennis Rodman", "Michael Jordan", "Kobe Bryant", "Stephen Curry"], "correctAnswer": "Dennis Rodman" }, { "id": "8", "question": "Berapa jumlah pemain dalam satu tim basket?", "answers": ["5", "6", "7", "8"], "correctAnswer": "5" }, { "id": "9", "question": "Olahraga apa yang menggunakan lapangan dengan garis-garis putih dan bola bundar?", "answers": ["Basket", "Sepak bola", "Voli", "Tenis"], "correctAnswer": "Basket" }, { "id": "10", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan net?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }, { "id": "11", "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Minions'?", "answers": ["Kevin Sanjaya dan Marcus Gideon", "Taufik Hidayat", "Susi Susanti", "Greysia Polii"], "correctAnswer": "Kevin Sanjaya dan Marcus Gideon" }, { "id": "12", "question": "Berapa jumlah set dalam permainan bulu tangkis?", "answers": ["2", "3", "4", "5"], "correctAnswer": "3" }, { "id": "13", "question": "Olahraga apa yang menggunakan raket dan bola berbulu?", "answers": ["Tenis", "Bulu tangkis", "Badminton", "Catur"], "correctAnswer": "Bulu tangkis" }, { "id": "14", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan jaring?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }, { "id": "15", "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Smiling Assassin'?", "answers": ["Taufik Hidayat", "Susi Susanti", "Greysia Polii", "Liliyana Natsir"], "correctAnswer": "Taufik Hidayat" }, { "id": "16", "question": "Berapa jumlah pemain dalam satu tim voli?", "answers": ["6", "7", "8", "9"], "correctAnswer": "6" }, { "id": "17", "question": "Olahraga apa yang menggunakan lapangan dengan garis-garis putih dan bola bundar?", "answers": ["Basket", "Sepak bola", "Voli", "Tenis"], "correctAnswer": "Basket" }, { "id": "18", "question": "Apa nama olahraga yang menggunakan raket dan bola berbulu?", "answers": ["Tenis", "Bulu tangkis", "Badminton", "Catur"], "correctAnswer": "Bulu tangkis" }, { "id": "19", "question": "Siapa pemain sepak bola Indonesia yang terkenal dengan julukan 'Lord'?", "answers": ["Bambang Pamungkas", "Cristiano Ronaldo", "Lionel Messi", "Kaka"], "correctAnswer": "Bambang Pamungkas" }, { "id": "20", "question": "Berapa jumlah pemain dalam satu tim sepak bola?", "answers": ["10", "11", "12", "13"], "correctAnswer": "11" }, { "id": "21", "question": "Olahraga apa yang menggunakan lapangan dengan garis-garis putih dan bola bundar?", "answers": ["Basket", "Sepak bola", "Voli", "Tenis"], "correctAnswer": "Basket" }, { "id": "22", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan jaring?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }, { "id": "23", "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Minions'?", "answers": ["Kevin Sanjaya dan Marcus Gideon", "Taufik Hidayat", "Susi Susanti", "Greysia Polii"], "correctAnswer": "Kevin Sanjaya dan Marcus Gideon" }, { "id": "24", "question": "Berapa jumlah set dalam permainan bulu tangkis?", "answers": ["2", "3", "4", "5"], "correctAnswer": "3" }, { "id": "25", "question": "Olahraga apa yang menggunakan raket dan bola berbulu?", "answers": ["Tenis", "Bulu tangkis", "Badminton", "Catur"], "correctAnswer": "Bulu tangkis" }, { "id": "26", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan jaring?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }, { "id": "27", "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Smiling Assassin'?", "answers": ["Taufik Hidayat", "Susi Susanti", "Greysia Polii", "Liliyana Natsir"], "correctAnswer": "Taufik Hidayat" }, { "id": "28", "question": "Berapa jumlah pemain dalam satu tim voli?", "answers": ["6", "7", "8", "9"], "correctAnswer": "6" }, { "id": "29", "question": "Olahraga apa yang menggunakan lapangan dengan garis-garis putih dan bola bundar?", "answers": ["Basket", "Sepak bola", "Voli", "Tenis"], "correctAnswer": "Basket" }, { "id": "30", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan net?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }, { "id": "31", "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Minions'?", "answers": ["Kevin Sanjaya dan Marcus Gideon", "Taufik Hidayat", "Susi Susanti", "Greysia Polii"], "correctAnswer": "Kevin Sanjaya dan Marcus Gideon" }, { "id": "32", "question": "Berapa jumlah set dalam permainan bulu tangkis?", "answers": ["2", "3", "4", "5"], "correctAnswer": "3" }, { "id": "33", "question": "Olahraga apa yang menggunakan raket dan bola berbulu?", "answers": ["Tenis", "Bulu tangkis", "Badminton", "Catur"], "correctAnswer": "Bulu tangkis" }, { "id": "34", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan jaring?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }, { "id": "35", "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Smiling Assassin'?", "answers": ["Taufik Hidayat", "Susi Susanti", "Greysia Polii", "Liliyana Natsir"], "correctAnswer": "Taufik Hidayat" }, { "id": "36", "question": "Berapa jumlah pemain dalam satu tim voli?", "answers": ["6", "7", "8", "9"], "correctAnswer": "6" }, { "id": "37", "question": "Olahraga apa yang menggunakan lapangan dengan garis-garis putih dan bola bundar?", "answers": ["Basket", "Sepak bola", "Voli", "Tenis"], "correctAnswer": "Basket" }, { "id": "38", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan net?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }, { "id": "39", "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Minions'?", "answers": ["Kevin Sanjaya dan Marcus Gideon", "Taufik Hidayat", "Susi Susanti", "Greysia Polii"], "correctAnswer": "Kevin Sanjaya dan Marcus Gideon" }, { "id": "40", "question": "Berapa jumlah set dalam permainan bulu tangkis?", "answers": ["2", "3", "4", "5"], "correctAnswer": "3" }, { "id": "41", "question": "Olahraga apa yang menggunakan raket dan bola berbulu?", "answers": ["Tenis", "Bulu tangkis", "Badminton", "Catur"], "correctAnswer": "Bulu tangkis" }, { "id": "42", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan jaring?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }, { "id": "43", "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Smiling Assassin'?", "answers": ["Taufik Hidayat", "Susi Susanti", "Greysia Polii", "Liliyana Natsir"], "correctAnswer": "Taufik Hidayat" }, { "id": "44", "question": "Berapa jumlah pemain dalam satu tim voli?", "answers": ["6", "7", "8", "9"], "correctAnswer": "6" }, { "id": "45", "question": "Olahraga apa yang menggunakan lapangan dengan garis-garis putih dan bola bundar?", "answers": ["Basket", "Sepak bola", "Voli", "Tenis"], "correctAnswer": "Basket" }, { "id": "46", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan net?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }, { "id": "47", "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Minions'?", "answers": ["Kevin Sanjaya dan Marcus Gideon", "Taufik Hidayat", "Susi Susanti", "Greysia Polii"], "correctAnswer": "Kevin Sanjaya dan Marcus Gideon" }, { "id": "48", "question": "Berapa jumlah set dalam permainan bulu tangkis?", "answers": ["2", "3", "4", "5"], "correctAnswer": "3" }, { "id": "49", "question": "Olahraga apa yang menggunakan raket dan bola berbulu?", "answers": ["Tenis", "Bulu tangkis", "Badminton", "Catur"], "correctAnswer": "Bulu tangkis" }, { "id": "50", "question": "Apa nama olahraga yang menggunakan bola bundar dan dimainkan di lapangan dengan net?", "answers": ["Voli", "Sepak bola", "Basket", "Tenis"], "correctAnswer": "Voli" }];
 
 app.prepare().then(() => {
   const httpServer = createServer(handler);
@@ -19,7 +18,14 @@ app.prepare().then(() => {
     },
   });
 
-  let waitingClients = [];
+  // Antrean untuk matchmaking berdasarkan tipe kuis
+  const matchmakingQueues = {
+    random: [],
+    sports: [],
+    english: [],
+    indonesian: []
+  };
+
   let currentQuestion = null;
   let questionStartTime = null;
 
@@ -29,15 +35,20 @@ app.prepare().then(() => {
   io.on("connection", (socket) => {
     console.log(`Client connected: ${socket.id}`);
 
-    // Add client to matchmaking queue
-    socket.on("requestMatchmaking", () => {
-      console.log(`Matchmaking request from: ${socket.id}`);
-      waitingClients.push(socket);
+    // Handle matchmaking request
+    socket.on("requestMatchmaking", (quizType = 'random') => {
+      console.log(`Matchmaking request from: ${socket.id} for ${quizType} quiz`);
+      if (!matchmakingQueues[quizType]) {
+        console.error(`Invalid quiz type: ${quizType}`);
+        return;
+      }
 
-      if (waitingClients.length >= 2) {
+      matchmakingQueues[quizType].push(socket);
+
+      if (matchmakingQueues[quizType].length >= 2) {
         // Create a new room
         const roomId = `room_${Date.now()}`;
-        const clientsInRoom = waitingClients.splice(0, 4);
+        const clientsInRoom = matchmakingQueues[quizType].splice(0, 4);
 
         clientsInRoom.forEach((client) => {
           client.join(roomId);
@@ -53,8 +64,17 @@ app.prepare().then(() => {
           };
         });
 
-        console.log(`Created room ${roomId} with ${clientsInRoom.length} clients.`);
-        startGame(roomId);
+        console.log(`Created room ${roomId} with ${clientsInRoom.length} clients for ${quizType} quiz.`);
+        startGame(roomId, quizType);
+      }
+    });
+
+    // Handle choosing quiz type
+    socket.on("requestNewGame", (quizType) => {
+      console.log(`Quiz type requested: ${quizType}`);
+      const roomId = [...socket.rooms][1];
+      if (roomId) {
+        startGame(roomId, quizType);
       }
     });
 
@@ -63,7 +83,7 @@ app.prepare().then(() => {
       const roomId = [...socket.rooms][1];
       if (currentQuestion && roomId) {
         const correct = currentQuestion.correctAnswer === answer;
-        
+
         if (correct) {
           playerProgress[roomId][socket.id].correctAnswers += 1;
         }
@@ -84,12 +104,17 @@ app.prepare().then(() => {
 
     socket.on("disconnect", () => {
       console.log(`Client disconnected: ${socket.id}`);
-      waitingClients = waitingClients.filter(client => client.id !== socket.id);
+      // Remove client from all matchmaking queues
+      Object.keys(matchmakingQueues).forEach((quizType) => {
+        matchmakingQueues[quizType] = matchmakingQueues[quizType].filter(client => client.id !== socket.id);
+      });
     });
   });
 
-  const startGame = (roomId) => {
+  const startGame = (roomId, quizType = 'random') => {
+    const questions = questionsDatabase[quizType] || questionsDatabase.random; // Select questions based on quizType
     let questionIndex = 0;
+
     const interval = setInterval(() => {
       if (questionIndex >= questions.length) {
         clearInterval(interval);
@@ -104,10 +129,15 @@ app.prepare().then(() => {
       // Emit leaderboard at the start of every question
       io.to(roomId).emit("leaderboardUpdate", playerProgress[roomId]);
 
+      questionIndex++;
+
       setTimeout(() => {
-        questionIndex++;
-      }, 5000); // 10 seconds per question
-    }, 5000); // Send new question every 10 seconds
+        if (questionIndex >= questions.length) {
+          clearInterval(interval);
+          io.to(roomId).emit("gameOver");
+        }
+      }, 5000); // 5 seconds per question
+    }, 5000); // Send new question every 5 seconds
   };
 
   httpServer

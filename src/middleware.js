@@ -22,5 +22,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ['/'], // Ganti dengan path yang perlu dilindungi
+  matcher: ['/', '/game'], // Ganti dengan path yang perlu dilindungi
 };
