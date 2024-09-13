@@ -106,8 +106,8 @@ app.prepare().then(() => {
 
       setTimeout(() => {
         questionIndex++;
-      }, 10000); // 10 seconds per question
-    }, 10000); // Send new question every 10 seconds
+      }, 5000); // 10 seconds per question
+    }, 5000); // Send new question every 10 seconds
   };
 
   httpServer

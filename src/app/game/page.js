@@ -114,7 +114,7 @@ export default function Game() {
               {selectedAnswer && <p>You answered: {selectedAnswer}</p>}
             </div>
           ) : (
-            <p>Waiting for the question...</p>
+            <p>Waiting for the question.....</p>
           )}
           <div>
             <h3>Leaderboard</h3>
