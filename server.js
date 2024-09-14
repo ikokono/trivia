@@ -1,6 +1,9 @@
+"use client";
 const { createServer } = require("node:http");
 const next = require("next");
 const { Server } = require("socket.io");
+const axios = require('axios'); // Import axios for making HTTP requests
+const { jwtVerify } = require('jose')
 const questionsDatabase = require("./database/questions.json");
 
 const dev = process.env.NODE_ENV !== "production";
@@ -8,6 +11,9 @@ const hostname = "localhost";
 const port = 3000;
 const app = next({ dev, hostname, port });
 const handler = app.getRequestHandler();
+require('dotenv').config()
+
+const JWT_SECRET = process.env.JWT_SECRET; // Replace with your JWT secret
 
 app.prepare().then(() => {
   const httpServer = createServer(handler);
@@ -20,7 +26,6 @@ app.prepare().then(() => {
 
   // Antrean untuk matchmaking berdasarkan tipe kuis
   const matchmakingQueues = {
-    random: [],
     sports: [],
     english: [],
     indonesian: []
@@ -28,42 +33,72 @@ app.prepare().then(() => {
 
   let currentQuestion = null;
   let questionStartTime = null;
+  let totalQuestions = 10; // Total pertanyaan untuk permainan
+  let questions = []; // Menyimpan pertanyaan yang sudah diacak
+  let questionIndex = 0; // Menyimpan indeks pertanyaan saat ini
 
   // Store player progress per room
   let playerProgress = {};
+  let username = {};
 
-  io.on("connection", (socket) => {
+  io.on("connection", async (socket) => {
     console.log(`Client connected: ${socket.id}`);
 
+    // Ambil token JWT dari cookies
+    const token = socket.handshake.headers.cookie?.split('token=')[1];
+
+    if (token) {
+      try {
+        // Decode the JWT to get user ID
+        const secret = new TextEncoder().encode(JWT_SECRET);
+        const { payload } = await jwtVerify(token, secret);
+        const userId = payload.userId; 
+
+        // Ambil username dari API menggunakan user ID
+        const response = await axios.get(`http://localhost:3000/api/user?id=${userId}`);
+        username[socket.id] = response.data.username; // Dapatkan username dari respons API
+      } catch (error) {
+        console.error('Failed to fetch username:', error);
+      }
+    }
+
+    // Emit username ke client yang terhubung
+    socket.emit('username', { username });
+
     // Handle matchmaking request
-    socket.on("requestMatchmaking", (quizType = 'random') => {
-      console.log(`Matchmaking request from: ${socket.id} for ${quizType} quiz`);
+    socket.on("requestMatchmaking", (quizType = 'sports') => {
+      console.log(`Matchmaking request from: ${socket.id} (${username}) for ${quizType} quiz`);
       if (!matchmakingQueues[quizType]) {
         console.error(`Invalid quiz type: ${quizType}`);
         return;
       }
-
+    
       matchmakingQueues[quizType].push(socket);
-
-      if (matchmakingQueues[quizType].length >= 2) {
+    
+      // Emit update for players in queue
+      io.emit('matchmakingUpdate', {
+        playersInQueue: matchmakingQueues[quizType].length
+      });
+    
+      if (matchmakingQueues[quizType].length >= 4) {
         // Create a new room
         const roomId = `room_${Date.now()}`;
         const clientsInRoom = matchmakingQueues[quizType].splice(0, 4);
-
+    
         clientsInRoom.forEach((client) => {
           client.join(roomId);
           client.emit("roomAssigned", roomId);
-
+    
           // Initialize progress for each player in the room
           if (!playerProgress[roomId]) {
             playerProgress[roomId] = {};
           }
           playerProgress[roomId][client.id] = {
-            currentQuestion: 0,
+            username: username[client.id],
             correctAnswers: 0,
           };
         });
-
+    
         console.log(`Created room ${roomId} with ${clientsInRoom.length} clients for ${quizType} quiz.`);
         startGame(roomId, quizType);
       }
@@ -88,9 +123,6 @@ app.prepare().then(() => {
           playerProgress[roomId][socket.id].correctAnswers += 1;
         }
 
-        // Update player's current question index
-        playerProgress[roomId][socket.id].currentQuestion += 1;
-
         // Emit answer result
         io.to(roomId).emit("answerResult", {
           socketId: socket.id,
@@ -99,6 +131,7 @@ app.prepare().then(() => {
 
         // Emit leaderboard update
         io.to(roomId).emit("leaderboardUpdate", playerProgress[roomId]);
+        console.log(playerProgress[roomId])
       }
     });
 
@@ -111,13 +144,14 @@ app.prepare().then(() => {
     });
   });
 
-  const startGame = (roomId, quizType = 'random') => {
-    const questions = questionsDatabase[quizType] || questionsDatabase.random; // Select questions based on quizType
-    let questionIndex = 0;
-
+  const startGame = (roomId, quizType = 'sports') => {
+    questions = shuffleArray(questionsDatabase[quizType] || questionsDatabase.sports);
+    questionIndex = 0;
+    
     const interval = setInterval(() => {
-      if (questionIndex >= questions.length) {
+      if (questionIndex >= totalQuestions) {
         clearInterval(interval);
+        determineWinner(roomId);
         io.to(roomId).emit("gameOver");
         return;
       }
@@ -132,12 +166,32 @@ app.prepare().then(() => {
       questionIndex++;
 
       setTimeout(() => {
-        if (questionIndex >= questions.length) {
+        if (questionIndex >= totalQuestions) {
           clearInterval(interval);
+          determineWinner(roomId);
           io.to(roomId).emit("gameOver");
         }
-      }, 5000); // 5 seconds per question
-    }, 5000); // Send new question every 5 seconds
+      }, 10000); // 10 seconds per question
+    }, 10000); // Send new question every 10 seconds
+  };
+
+  const determineWinner = (roomId) => {
+    const scores = Object.values(playerProgress[roomId]);
+    scores.sort((a, b) => b.correctAnswers - a.correctAnswers); // Sort players by their scores
+
+    io.to(roomId).emit("gameResult", {
+      winner: scores[0],
+      losers: scores.slice(1)
+    });
+  };
+
+  // Helper function to shuffle an array
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
   };
 
   httpServer

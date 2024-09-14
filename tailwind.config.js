@@ -15,6 +15,11 @@ module.exports = {
         secondary: "var(--secondary)",
         border: "var(--border)",
       },
+      fontSize: {
+        '5xl': '3rem', // Anda bisa menyesuaikan nilai sesuai kebutuhan
+        '6xl': '4rem',
+        '7xl': '5rem',
+      },
     },
   },
   plugins: [],
