@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Arial', 'sans-serif'], // Ganti dengan font yang Anda inginkan
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

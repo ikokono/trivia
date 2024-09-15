@@ -21,7 +21,7 @@ export async function GET(req) {
       return new Response(JSON.stringify({ error: 'User not found' }), { status: 404 });
     }
 
-    return new Response(JSON.stringify({ username: user.username }), { status: 200 });
+    return new Response(JSON.stringify(user), { status: 200 });
   } catch (error) {
     return new Response(JSON.stringify({ error: 'Failed to fetch user' }), { status: 500 });
   }

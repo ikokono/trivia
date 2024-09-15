@@ -29,11 +29,24 @@ export default function Podium({ gameResult }) {
           className={`flex flex-col items-center ${podiumColors[player.position - 1]} p-4 rounded-lg`}
           style={{
             width: '100px',
-            height: `${160 - player.position * 10}px` // Adjust height for podium effect
+            height: `${200 - player.position * 6}px` // Adjust height for podium effect
           }}
         >
+          {/* Display the trophy emoji */}
           <div className="text-white font-bold">{player.position === 1 ? "🏆" : player.position === 2 ? "🥈" : "🥉"}</div>
-          <p className="text-white">{player.username}</p>
+          
+          {/* Display player avatar */}
+          <img
+            src={player.avatarUrl} // Ensure the URL is valid and accessible
+            alt={player.username}
+            className="w-16 h-16 rounded-full border-4 border-white mt-2"
+            style={{ objectFit: 'cover' }}
+          />
+          
+          {/* Display player username */}
+          <p className="text-white mt-2">{player.username}</p>
+          
+          {/* Display player points */}
           <p className="text-white">{player.correctAnswers} pts</p>
         </motion.div>
       ))}

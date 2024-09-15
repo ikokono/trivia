@@ -27,6 +27,7 @@ export default function Game() {
   const [audioSrc, setAudioSrc] = useState('');
   const [username, setUsername] = useState(null);
   const [token, setToken] = useState(null);
+  const [coins, setCoins] = useState(0)
   const router = useRouter();
 
   useEffect(() => {
@@ -107,8 +108,9 @@ export default function Game() {
 
     socket.on('gameResult', (result) => {
       setGameResult(result);
+      console.log(result)
 
-      if (result.winner.username === 'YourUsername') { // Ganti dengan logika untuk mendeteksi pemenang Anda
+      if (result.winner.username === username) { // Ganti dengan logika untuk mendeteksi pemenang Anda
         setAudioSrc('/audio/Win.mp3'); // Path ke lagu menang
       } else {
         setAudioSrc('/audio/Lose.mp3'); // Path ke lagu kalah
@@ -169,7 +171,7 @@ export default function Game() {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="relative flex flex-col items-center justify-center min-h-screen p-4 font-sans">
       <audio ref={audioRef} src="/audio/Theme_quiz.mp3" preload="auto" loop />
       <AnimatePresence>
         {activeBackground && (
@@ -193,11 +195,11 @@ export default function Game() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-xl font-semibold mb-4">Select Quiz Type</h3>
-            <div className="flex space-x-4">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Select Quiz Type</h3>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               {/* Button for English */}
               <motion.div
-                className="w-32 h-32 bg-blue-500 text-white flex items-center justify-center rounded-lg cursor-pointer shadow-lg"
+                className="w-24 h-24 sm:w-32 sm:h-32 bg-blue-500 text-white flex items-center justify-center rounded-lg cursor-pointer shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
                 onHoverStart={() => setActiveBackground('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fsimpleview%2Fimage%2Fupload%2Fcrm%2Fnewyorkstate%2Fstatueofliberty_julienneschaer_077_ade37ed2-fc26-2db2-4f0873df93118bb3.jpg&f=1&nofb=1&ipt=8806139492a293ff18d4cb115d390a5fe6c9ac5795d4559eddd97f142c4acdb9&ipo=images')}
@@ -208,12 +210,12 @@ export default function Game() {
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.5 }}
               >
-                <p className="text-lg">English</p>
+                <p className="text-sm sm:text-lg">English</p>
               </motion.div>
 
               {/* Button for Sports */}
               <motion.div
-                className="w-32 h-32 bg-green-500 text-white flex items-center justify-center rounded-lg cursor-pointer shadow-lg"
+                className="w-24 h-24 sm:w-32 sm:h-32 bg-green-500 text-white flex items-center justify-center rounded-lg cursor-pointer shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
                 onHoverStart={() => setActiveBackground('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F720099.jpg&f=1&nofb=1&ipt=286afb481ca3e16067e79804b2266167e1a7e104469381c9473935595f0851c2&ipo=images')}
@@ -224,12 +226,12 @@ export default function Game() {
                 exit={{ opacity: 0, x: 50 }}
                 transition={{ duration: 0.5 }}
               >
-                <p className="text-lg">Sports</p>
+                <p className="text-sm sm:text-lg">Sports</p>
               </motion.div>
 
               {/* Button for Indonesian */}
               <motion.div
-                className="w-32 h-32 bg-red-500 text-white flex items-center justify-center rounded-lg cursor-pointer shadow-lg"
+                className="w-24 h-24 sm:w-32 sm:h-32 bg-red-500 text-white flex items-center justify-center rounded-lg cursor-pointer shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
                 onHoverStart={() => setActiveBackground('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsiderjourneys.com.au%2Fwp-content%2Fuploads%2F2020%2F01%2FIndonesia-Bali-pura-ulun-danu-bratan-temple-shutterstock_638432449-1920.jpg&f=1&nofb=1&ipt=c705fbcc77101469d33188e515deedfa60720cc914252f23b297c264d1071434&ipo=images')}
@@ -240,7 +242,7 @@ export default function Game() {
                 exit={{ opacity: 0, x: 50 }}
                 transition={{ duration: 0.5 }}
               >
-                <p className="text-lg">Indonesian</p>
+                <p className="text-sm sm:text-lg">Indonesian</p>
               </motion.div>
             </div>
           </motion.div>
@@ -256,11 +258,13 @@ export default function Game() {
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-xl font-semibold mb-4">{quizType.toUpperCase()} Quiz</h2>
+            {!question && (
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">{quizType.toUpperCase()}</h2>
+            )}
             {question && (
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-medium mb-4 text-black">{question.question}</h3>
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                <h3 className="text-base sm:text-lg font-medium mb-4 text-black">{question.question}</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   {answerOptions.map((answer, index) => (
                     <motion.button
                       key={index}
@@ -274,15 +278,16 @@ export default function Game() {
                     </motion.button>
                   ))}
                 </div>
-                <p className="text-lg text-black">Timer: {timer}s</p>
+                <p className="text-sm sm:text-lg text-black">Timer: {timer}s</p>
+              </div>
+            )}
+            {leaderboard && question &&  (
+              <div className="mt-4">
+                {renderLeaderboard()}
               </div>
             )}
             <div className="mt-4">
-              <h3 className="text-xl font-semibold">Leaderboard</h3>
-              {renderLeaderboard()}
-            </div>
-            <div className="mt-4">
-              <h3 className="text-xl font-semibold">Players in Queue: {playersInQueue}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold">Players in Queue: {playersInQueue}</h3>
             </div>
           </motion.div>
         )}
@@ -293,4 +298,5 @@ export default function Game() {
       </AnimatePresence>
     </div>
   );
+
 }

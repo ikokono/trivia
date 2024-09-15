@@ -16,7 +16,7 @@ export default function Home() {
   const [token, setToken] = useState(null);
   const audioRef = useRef(null);
   const router = useRouter();
-  
+
   // State untuk Play/Pause button
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -74,7 +74,7 @@ export default function Home() {
 
     return () => {
       if (audio) {
-        audio.pause(); 
+        audio.pause();
         audio.currentTime = 0;
       }
     };
@@ -95,63 +95,97 @@ export default function Home() {
   };
 
   return (
-    <div className="lobby-container">
+    <div className="lobby-container relative min-h-screen overflow-hidden">
       <motion.div
-        className="background-gif-container"
+        className="background-gif-container absolute inset-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
       >
-        <img src="/images/background/lobby_background.gif" alt="Background GIF" className="background-gif" />
+        <img
+          src="/images/background/lobby_background.gif"
+          alt="Background GIF"
+          className="background-gif object-cover w-full h-full"
+        />
       </motion.div>
 
       {/* Tombol Play/Pause di pojok kanan atas */}
       <button
         onClick={handlePlayPause}
-        className="absolute top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300"
+        className="absolute top-4 right-4 bg-blue-500 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-600 transition duration-300"
       >
-        {isPlaying ? 'Pause' : "Play"}
+        {isPlaying ? 'Pause' : 'Play'}
       </button>
 
       <audio ref={audioRef} src="/audio/Theme.mp3" preload="auto" loop />
 
       <motion.div
-        className="game-title-container"
+        className="game-title-container flex justify-center mt-10 sm:mt-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1, type: 'spring' }}
       >
-        <img src="/images/assets/logo.png" alt="Game Title" className="game-title" />
+        <img
+          src="/images/assets/logo.png"
+          alt="Game Title"
+          className="w-3/4 sm:w-1/2 lg:w-1/3 xl:w-1/4 mx-auto"
+        />
+
       </motion.div>
 
       <motion.div
-        className="content"
+        className="content mt-15 sm:mt-20"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="login-section">
-          <h1 className='greetings-text'>{username ? `Welcome, ${username}` : 'Loading profile...'}</h1>
-          <div className='flex justify-center items-center'>
-            <img src='/images/assets/start.png' className='startbtnimg' onClick={handleStart} />
+        <div className="login-section text-center p-4">
+          <h1 className="greetings-text text-xl sm:text-l">
+            {username ? `Welcome, ${username}` : 'Loading profile...'}
+          </h1>
+          <div className="flex justify-center items-center mt-4">
+            <img
+              src="/images/assets/start.png"
+              className="w-20 h-auto sm:w-24 md:w-32 lg:w-30 xl:w-35 cursor-pointer"
+              onClick={handleStart}
+            />
+
           </div>
-          <nav>
-            <ul className="flex space-x-4 justify-center">
+          <nav className="mt-6">
+            <ul className="flex flex-wrap space-x-4 justify-center">
               {token && (
                 <>
-                  <li><Link href={`/profile/${token}`} className="link">Profile</Link></li>
-                  <li><Link href="/garage" className="link">Garage</Link></li>
-                  <li><Link href="/shop" className="link">Shop</Link></li>
-                  <li><Link href="/about" className="link">About</Link></li>
+                  <li className="mb-2">
+                    <Link href={`/profile/${token}`} className="link text-sm sm:text-base md:text-lg">
+                      Profile
+                    </Link>
+                  </li>
+                  <li className="mb-2">
+                    <Link href="/garage" className="link text-sm sm:text-base md:text-lg">
+                      Garage
+                    </Link>
+                  </li>
+                  <li className="mb-2">
+                    <Link href="/shop" className="link text-sm sm:text-base md:text-lg">
+                      Shop
+                    </Link>
+                  </li>
+                  <li className="mb-2">
+                    <Link href="/about" className="link text-sm sm:text-base md:text-lg">
+                      About
+                    </Link>
+                  </li>
                 </>
               )}
             </ul>
           </nav>
+
         </div>
       </motion.div>
     </div>
   );
+
 }

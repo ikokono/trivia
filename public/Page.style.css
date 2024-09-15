@@ -38,7 +38,7 @@ body {
 
 .game-title-container {
   position: absolute;
-  top: 10%; /* Posisi dari atas */
+  top: 15%; /* Posisi dari atas */
   display: flex;
   justify-content: center; /* Pusatkan secara horizontal */
   width: 100%;
