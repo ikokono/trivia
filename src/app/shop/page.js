@@ -182,7 +182,7 @@ export default function ShopPage() {
             <div className="absolute inset-0 bg-black bg-opacity-25"></div>
 
             {/* Shop Container */}
-            <div className="relative z-10 flex flex-col items-center justify-start h-screen text-white scrollable-hidden-scrollbar">
+            <div className="relative z-10 flex flex-col items-center justify-start h-screen text-white scrollable-hidden-scrollbar pb-6">
                 <h1 className="text-4xl font-bold mb-8 mt-20 font-retro">
                     <span className="text-white">Digi</span><span className="text-retroGreen">Dudes</span>
                 </h1>

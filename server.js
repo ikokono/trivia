@@ -122,7 +122,7 @@ app.prepare().then(() => {
         playersInQueue: matchmakingQueues[quizType].length
       });
 
-      if (matchmakingQueues[quizType].length >= 2) {
+      if (matchmakingQueues[quizType].length >= 4) {
         const roomId = `room_${Date.now()}`;
         const clientsInRoom = matchmakingQueues[quizType].splice(0, 4);
 

@@ -28,7 +28,8 @@ export async function POST(req) {
       password: hashedPassword,
       avatar: "/images/avatar/avatar_default.png",
       balance: 0,
-      exp: 0
+      exp: 0,
+      bio: "Lorem Ipsum"
     });
 
     const userId = result.insertedId;
