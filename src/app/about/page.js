@@ -1,11 +1,36 @@
-import Link from 'next/link';
-import '../styles/About.module.css'
+'use client';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import LoadingScreen from '../../components/Loading'; // Impor komponen loading
+import style from '../styles/About.module.css';
 
 const About = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulasikan loading selama 1 detik
+        const timer = setTimeout(() => setLoading(false), 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <LoadingScreen />; // Tampilkan loading screen jika masih loading
+
     return (
-        <div className="about-page h-screen flex flex-col items-center justify-center p-4 bg-gray-900 text-gray-300  overflow-y-auto">
-            <div className="max-w-4xl h-[95vh] p-6 rounded-lg mt-20 mb-8">
-                <h1 className="text-2xl font-bold mb-4 text-green-400">About Us</h1>
+        <motion.div
+            className="about-page h-screen flex flex-col items-center justify-center p-4 bg-gray-900 text-gray-300 scrollable-hidden-scrollbar"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+        >
+            <motion.div
+                className="max-w-4xl h-[95vh] md:h-[100vh] sm:h-[80vh] p-6 rounded-lg mt-20 mb-8"
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, type: 'spring', stiffness: 50 }}
+            >
+                <h1 className={`text-2xl font-bold mb-4 text-green-400 ${style.typing} font-retro`}>
+                    About Us<span>_</span>
+                </h1>
                 <p className="text-lg mb-4 font-sans">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed dictum, ipsum at cursus laoreet, urna magna viverra nunc, et vestibulum velit dui in metus. Donec bibendum, turpis ut dapibus dictum, leo quam elementum nisl, eget pharetra mi dolor non arcu. Integer tristique ligula sit amet bibendum fringilla. Ut imperdiet, justo at aliquet convallis, turpis lorem aliquam risus, id malesuada velit urna sed tortor. Phasellus efficitur libero non magna laoreet, nec cursus dui condimentum.
                 </p>
@@ -15,17 +40,19 @@ const About = () => {
                 <p className="text-lg mb-4 font-sans">
                     Vestibulum vehicula enim id ante dictum, sed venenatis orci elementum. Aliquam ac ligula a sapien pharetra malesuada. Duis euismod ipsum ut justo dapibus, sed consectetur velit feugiat. Praesent dictum, erat sit amet bibendum interdum, odio dolor fringilla est, sed vehicula ligula justo eget libero.
                 </p>
-                <div className="text-center mt-8 flex flex-row items-center justify-center space-x-1 font-sans">
+                <div className="text-center mt-8 flex flex-row items-center justify-center space-x-1 font-sans pb-20">
                     <p className="text-lg">Made with</p>
-                    <img
+                    <motion.img
                         src="/images/assets/heart.png"
                         alt="Heart"
-                        className="w-6 h-6" // Adjust size as needed
+                        className="w-6 h-6"
+                        initial={{ scale: 1 }}
+                        animate={{ scale: 1.2 }}
+                        transition={{ repeat: Infinity, repeatType: 'reverse', duration: 1 }}
                     />
                 </div>
-
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 

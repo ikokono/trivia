@@ -139,6 +139,7 @@ export default function Game() {
 
   const handleQuizTypeChange = (type) => {
     setQuizType(type);
+    setActiveBackground(null)
     socket.emit('requestMatchmaking', type);
   };
 
@@ -202,7 +203,7 @@ export default function Game() {
                 className="w-24 h-24 sm:w-32 sm:h-32 bg-blue-500 text-white flex items-center justify-center rounded-lg cursor-pointer shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
-                onHoverStart={() => setActiveBackground('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fsimpleview%2Fimage%2Fupload%2Fcrm%2Fnewyorkstate%2Fstatueofliberty_julienneschaer_077_ade37ed2-fc26-2db2-4f0873df93118bb3.jpg&f=1&nofb=1&ipt=8806139492a293ff18d4cb115d390a5fe6c9ac5795d4559eddd97f142c4acdb9&ipo=images')}
+                onHoverStart={() => setActiveBackground('/images/background/english.jpg')}
                 onHoverEnd={() => setActiveBackground(null)}
                 onClick={() => handleQuizTypeChange('english')}
                 initial={{ opacity: 0, x: -50 }}
@@ -218,7 +219,7 @@ export default function Game() {
                 className="w-24 h-24 sm:w-32 sm:h-32 bg-green-500 text-white flex items-center justify-center rounded-lg cursor-pointer shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
-                onHoverStart={() => setActiveBackground('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F720099.jpg&f=1&nofb=1&ipt=286afb481ca3e16067e79804b2266167e1a7e104469381c9473935595f0851c2&ipo=images')}
+                onHoverStart={() => setActiveBackground('/images/background/sports.jpg')}
                 onHoverEnd={() => setActiveBackground(null)}
                 onClick={() => handleQuizTypeChange('sports')}
                 initial={{ opacity: 0, x: 0 }}
@@ -234,7 +235,7 @@ export default function Game() {
                 className="w-24 h-24 sm:w-32 sm:h-32 bg-red-500 text-white flex items-center justify-center rounded-lg cursor-pointer shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
-                onHoverStart={() => setActiveBackground('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Finsiderjourneys.com.au%2Fwp-content%2Fuploads%2F2020%2F01%2FIndonesia-Bali-pura-ulun-danu-bratan-temple-shutterstock_638432449-1920.jpg&f=1&nofb=1&ipt=c705fbcc77101469d33188e515deedfa60720cc914252f23b297c264d1071434&ipo=images')}
+                onHoverStart={() => setActiveBackground('/images/background/indonesia.jpg')}
                 onHoverEnd={() => setActiveBackground(null)}
                 onClick={() => handleQuizTypeChange('indonesian')}
                 initial={{ opacity: 0, x: 50 }}

@@ -102,7 +102,7 @@ app.prepare().then(() => {
       const response = await axios.get(`http://localhost:3000/api/user?id=${id}`);
       return response.data
     }
-    
+
 
     // Emit username ke client yang terhubung
     socket.emit('username', { username });
@@ -198,16 +198,16 @@ app.prepare().then(() => {
       totalQuestions: 3,
       interval: null
     };
-  
+
     // Ambil daftar client di room
     const clients = Array.from(io.sockets.adapter.rooms.get(roomId) || []);
-  
+
     // Tambahkan pemain ke dalam room
     for (const clientId of clients) {
       try {
         // Pastikan username sudah ada di objek `username`
         const playerData = username[clientId] || { username: 'Unknown', abilities: [], id: clientId };
-  
+
         rooms[roomId].players[clientId] = {
           username: playerData.username,
           id: playerData.id, // Pastikan id tersedia
@@ -216,19 +216,19 @@ app.prepare().then(() => {
           avatarUrl: playerData.avatarUrl,
           correctAnswers: 0
         };
-  
+
         // Kirim profil pemain ke client masing-masing
         io.to(clientId).emit("playerProfile", rooms[roomId].players[clientId]);
       } catch (error) {
         console.error(`Error adding player ${clientId} to room ${roomId}:`, error);
       }
     }
-  
+
     console.log(`Initialized players in room ${roomId}:`, rooms[roomId].players);
-  
+
     // Kirim data pemain ke semua client untuk leaderboard
     io.to(roomId).emit("playerData", rooms[roomId].players);
-  
+
     const interval = setInterval(() => {
       if (rooms[roomId].questionIndex >= rooms[roomId].totalQuestions) {
         clearInterval(rooms[roomId].interval);
@@ -236,15 +236,15 @@ app.prepare().then(() => {
         io.to(roomId).emit("gameOver");
         return;
       }
-  
+
       rooms[roomId].currentQuestion = rooms[roomId].questions[rooms[roomId].questionIndex];
       io.to(roomId).emit("newQuestion", rooms[roomId].currentQuestion);
-  
+
       // Emit leaderboard at the start of every question
       io.to(roomId).emit("leaderboardUpdate", rooms[roomId].players);
-  
+
       rooms[roomId].questionIndex++;
-  
+
       setTimeout(() => {
         if (rooms[roomId].questionIndex >= rooms[roomId].totalQuestions) {
           clearInterval(rooms[roomId].interval);
@@ -253,7 +253,7 @@ app.prepare().then(() => {
         }
       }, 10000); // 10 seconds per question
     }, 10000); // Send new question every 10 seconds
-  
+
     rooms[roomId].interval = interval;
   };
 
@@ -266,55 +266,82 @@ app.prepare().then(() => {
         },
         body: JSON.stringify({ amount }),
       });
-  
+
       if (!response.ok) {
         console.log(response)
         throw new Error('Failed to update coins');
       }
-  
+
       console.log(`Coins updated successfully for ${username}`);
     } catch (error) {
       console.error(error);
     }
   };
-  
+
+  const updateExpInAPI = async (playerId, exp) => {
+    try {
+      const response = await fetch(`http://localhost:3000/api/user/exp?id=${playerId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ amount: exp }),
+      });
+
+      if (!response.ok) {
+        console.log(response)
+        throw new Error('Failed to update EXP');
+      }
+
+      const result = await response.json();
+      console.log('EXP updated:', result);
+    } catch (error) {
+      console.error('Error updating EXP:', error);
+    }
+  };
+
   const determineWinner = (roomId) => {
     if (!rooms[roomId] || !rooms[roomId].players) {
       console.error(`Room ${roomId} does not exist or has no players.`);
       return;
     }
-  
+
     // Ambil semua pemain dan skor mereka dari room
     const players = Object.values(rooms[roomId].players);
-  
+
     // Urutkan pemain berdasarkan jumlah jawaban yang benar
     players.sort((a, b) => b.correctAnswers - a.correctAnswers);
-  
+
     // Tentukan koin per peringkat
     const coinPerRank = [10, 8, 6, 4];
+    const expPerRank = [100, 80, 60, 40];
 
-    const aa = {}
-  
+    const coins = {}
+    const exp = {}
+
     // Hitung dan perbarui koin untuk setiap pemain berdasarkan peringkat mereka
     players.forEach((player, index) => {
       const coinsEarned = coinPerRank[index] ? player.correctAnswers * coinPerRank[index] : 0;
+      const expEarned = expPerRank[index] ? expPerRank[index] : 0;
+
       updateCoinsInAPI(player.id, coinsEarned); // Update melalui API
-  
+      updateExpInAPI(player.id, expEarned);
+
       // Kirimkan koin ke klien yang bersangkutan
-      aa[player.username] = coinsEarned
-      
+      coins[player.username] = coinsEarned
+      exp[player.username] = expEarned
+
       console.log(`${player.username}: ${coinsEarned}`)
     });
-    
-    console.log(aa)
     // Kirim hasil permainan ke room setelah pembaruan koin
     io.to(roomId).emit("gameResult", {
       winner: players[0], // Pemain dengan skor tertinggi
       losers: players.slice(1),
-      coins: aa // Sisanya adalah kalah
+      coins,
+      exp // Sisanya adalah kalah
     });
   };
-  
+
 
   // Helper function to shuffle an array
   const shuffleArray = (array) => {

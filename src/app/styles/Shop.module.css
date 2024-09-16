@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.about-page {
+    font-family: 'Arial, sans-serif';
+    /* Ganti dengan font yang Anda inginkan */
+}
+
+.money {
+    color: #ffcc00;
+    text-decoration: none;
+    text-shadow:
+    -1px -1px 0 #000000,  
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000; /* Warna stroke */
+  }

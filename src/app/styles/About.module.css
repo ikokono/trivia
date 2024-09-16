@@ -1,4 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .about-page {
     font-family: 'Arial, sans-serif';
     /* Ganti dengan font yang Anda inginkan */
+}
+
+/* styles/About.module.css */
+.typing {
+    display: inline-block;
+    position: relative;
+}
+
+.typing span {
+    display: inline-block;
+    animation: blink-caret 0.75s step-end infinite;
+    font-weight: bold; /* Menyesuaikan berat font jika diperlukan */
+}
+
+@keyframes blink-caret {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: currentColor; /* Menggunakan warna teks saat ini */
+    }
 }

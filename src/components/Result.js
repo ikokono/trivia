@@ -10,19 +10,23 @@ export default function MatchResult({ gameResult, gameOver, username }) {
   const [showCoins, setShowCoins] = useState(false);
   const [continueVisible, setContinueVisible] = useState(true);
   const [coins, setCoins] = useState(0);
+  const [exp, setExp] = useState(0);
   const router = useRouter();
-  
+
   useEffect(() => {
     if (gameOver) {
       // Determine if the current user is the winner
       console.log(gameResult)
       const isWinner = gameResult.winner.username === username;
-      
+
       // Set message based on whether the user is the winner or not
       setShowMessage(isWinner ? 'Congratulations!' : 'You Lose');
-      
+
       setCoins(gameResult.coins[username]); // Update coins when continuing
-      console.log(gameResult.coins[username])
+      setExp(gameResult.exp[username]); // Update coins when continuing
+
+      console.log("exp", gameResult.coins[username])
+
       setTimeout(() => {
         setShowMessage('');
         setShowResult(true);
@@ -38,9 +42,9 @@ export default function MatchResult({ gameResult, gameOver, username }) {
       const duration = 2; // Duration in seconds
       const stepTime = 100; // Update interval in milliseconds
       const steps = duration * 1000 / stepTime;
-      
+
       const stepValue = (end - start) / steps;
-      
+
       const interval = setInterval(() => {
         start += stepValue;
         if (start >= end) {
@@ -97,16 +101,15 @@ export default function MatchResult({ gameResult, gameOver, username }) {
             className="fixed inset-0 flex items-center justify-center z-50 p-4"
           >
             <h1
-              className={`text-4xl md:text-7xl font-bold ${
-                showMessage === 'Congratulations!' ? 'text-green-500' : 'text-red-500'
-              }`}
+              className={`text-4xl md:text-7xl font-bold ${showMessage === 'Congratulations!' ? 'text-green-500' : 'text-red-500'
+                }`}
             >
               {showMessage}
             </h1>
           </motion.div>
         )}
       </AnimatePresence>
-  
+
       {showResult && (
         <div className="relative flex flex-col items-center p-4">
           <AnimatePresence>
@@ -122,13 +125,17 @@ export default function MatchResult({ gameResult, gameOver, username }) {
                   className="p-4 rounded-lg flex flex-col"
                   style={{ transform: 'translateY(2%)' }}
                 >
-                  <p className="text-3xl md:text-6xl font-bold">You Received</p>
-                  <p className="text-lg md:text-2xl font-bold ml-3">{coins} coins</p>
+                  <p className="text-3xl md:text-6xl font-bold mb-5">You Received</p>
+                  <div className="flex items-center ml-4">
+                    <span className={`text-yellow-400 font-semibold ml-2`}>{coins}</span>
+                    <img src='/images/assets/exp.png' width="24" height="24" className={`ml-5`}/>
+                    <span className={`text-green-400 font-semibold ml-2`}>{exp}</span>
+                  </div>
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
-  
+
           <AnimatePresence>
             {showResult && (
               <motion.div
@@ -142,7 +149,7 @@ export default function MatchResult({ gameResult, gameOver, username }) {
               </motion.div>
             )}
           </AnimatePresence>
-  
+
           {continueVisible && (
             <motion.div
               initial={{ opacity: 1 }}
@@ -161,5 +168,5 @@ export default function MatchResult({ gameResult, gameOver, username }) {
       )}
     </>
   );
-  
+
 }

@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Arial', 'sans-serif'], // Ganti dengan font yang Anda inginkan
+        sans: ['Arial', 'sans-serif'], // Font default
+        retro: ['"Press Start 2P"', 'cursive'], // Tambahkan font baru
       },
       colors: {
         background: "var(--background)",
@@ -17,9 +18,10 @@ module.exports = {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         border: "var(--border)",
+        retroGreen: "#91C483"
       },
       fontSize: {
-        '5xl': '3rem', // Anda bisa menyesuaikan nilai sesuai kebutuhan
+        '5xl': '3rem', 
         '6xl': '4rem',
         '7xl': '5rem',
       },

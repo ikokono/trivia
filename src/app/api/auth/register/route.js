@@ -26,7 +26,9 @@ export async function POST(req) {
     const result = await db.collection('users').insertOne({
       username,
       password: hashedPassword,
-      avatar: "/images/driver_komeng.png",
+      avatar: "/images/avatar/avatar_default.png",
+      balance: 0,
+      exp: 0
     });
 
     const userId = result.insertedId;

@@ -67,31 +67,55 @@ export async function DELETE(req) {
 }
 
 export async function PUT(req) {
-  try {
-    // Ambil ID dari query string
-    const url = new URL(req.url);
-    const userId = url.searchParams.get('id');
-    const itemId = url.searchParams.get('itemId');
-    
-    if (!userId || !itemId) {
-      return new Response(JSON.stringify({ error: 'User ID and Item ID are required' }), { status: 400 });
+    try {
+      // Ambil ID dari query string
+      const url = new URL(req.url);
+      const userId = url.searchParams.get('id');
+      const itemId = url.searchParams.get('itemId');
+      
+      if (!userId || !itemId) {
+        return new Response(JSON.stringify({ error: 'User ID and Item ID are required' }), { status: 400 });
+      }
+  
+      const client = await clientPromise;
+      const db = client.db();
+  
+      // Temukan pengguna dengan ID yang diberikan
+      const user = await db.collection('users').findOne({ _id: new ObjectId(userId) });
+      if (!user) {
+        return new Response(JSON.stringify({ error: 'User not found' }), { status: 404 });
+      }
+  
+      // Temukan item dengan ID yang diberikan
+      const item = await db.collection('items').findOne({ _id: new ObjectId(itemId) });
+      if (!item) {
+        return new Response(JSON.stringify({ error: 'Item not found' }), { status: 404 });
+      }
+  
+      // Validasi apakah user memiliki cukup balance
+      if (user.balance < item.price) {
+        return new Response(JSON.stringify({ error: 'Insufficient balance' }), { status: 400 });
+      }
+  
+      // Kurangi balance user
+      const newBalance = user.balance - item.price;
+  
+      // Tambahkan item ke array items dalam dokumen pengguna dan perbarui balance
+      const result = await db.collection('users').updateOne(
+        { _id: new ObjectId(userId) },
+        { 
+          $addToSet: { items: new ObjectId(itemId) }, // $addToSet memastikan item tidak duplikat
+          $set: { balance: newBalance }
+        }
+      );
+  
+      if (result.modifiedCount === 0) {
+        return new Response(JSON.stringify({ error: 'Failed to add item to user\'s items or update balance' }), { status: 400 });
+      }
+  
+      return new Response(JSON.stringify({ message: 'Item purchased and balance updated successfully' }), { status: 200 });
+    } catch (error) {
+      return new Response(JSON.stringify({ error: 'Failed to process purchase' }), { status: 500 });
     }
-
-    const client = await clientPromise;
-    const db = client.db();
-
-    // Tambahkan item ke array items dalam dokumen pengguna
-    const result = await db.collection('users').updateOne(
-      { _id: new ObjectId(userId) },
-      { $addToSet: { items: new ObjectId(itemId) } } // $addToSet memastikan item tidak duplikat
-    );
-
-    if (result.modifiedCount === 0) {
-      return new Response(JSON.stringify({ error: 'Failed to add item to user\'s items' }), { status: 400 });
-    }
-
-    return new Response(JSON.stringify({ message: 'Item added to user successfully' }), { status: 200 });
-  } catch (error) {
-    return new Response(JSON.stringify({ error: 'Failed to add item to user' }), { status: 500 });
   }
-}
+  

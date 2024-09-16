@@ -19,6 +19,20 @@ body {
   font-family: sans-serif;
 }
 
+.scrollable-hidden-scrollbar {
+  overflow: auto;
+}
+
+.scrollable-hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* Menyembunyikan scrollbar di browser berbasis Webkit */
+}
+
+.scrollable-hidden-scrollbar {
+  -ms-overflow-style: none;  /* Untuk Internet Explorer dan Edge */
+  scrollbar-width: none;     /* Untuk Firefox */
+}
+
+
 /* Remove Switch Styles */
 /* Remove any related CSS classes for switch here */
 

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { jwtDecode } from "jwt-decode";
 import nookies from 'nookies';
 import Link from 'next/link';
-import { jwtVerify } from 'jose';
+import Loading from '../components/Loading';
 import "../../public/Page.style.css"
 import { useRouter } from "next/navigation";
 
@@ -15,6 +15,7 @@ export default function Home() {
   const [username, setUsername] = useState(null);
   const [token, setToken] = useState(null);
   const audioRef = useRef(null);
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   // State untuk Play/Pause button
@@ -39,6 +40,8 @@ export default function Home() {
           console.error('Token decoding or API error:', error);
         }
       } else setUsername('No token found');
+
+      setLoading(false);
     };
 
     fetchTokenAndUsername();
@@ -115,7 +118,7 @@ export default function Home() {
         onClick={handlePlayPause}
         className="absolute top-4 right-4 bg-blue-500 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-600 transition duration-300"
       >
-        {isPlaying ? 'Pause' : 'Play'}
+        {isPlaying ? <img src="images/assets/pause.png" className="w-3 h-3"/> : <img src="images/assets/play.png" className="w-3 h-3"/>}
       </button>
 
       <audio ref={audioRef} src="/audio/Theme.mp3" preload="auto" loop />
@@ -159,22 +162,20 @@ export default function Home() {
               {token && (
                 <>
                   <li className="mb-2">
-                    <Link href={`/profile/${token}`} className="link text-sm sm:text-base md:text-lg">
+                    <Link href="/profile/@me" className="flex link text-sm sm:text-base md:text-lg items-center">
+                    <img src="/images/assets/profile.png" className="h-9 w-9 mr-2"></img>
                       Profile
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/garage" className="link text-sm sm:text-base md:text-lg">
-                      Garage
-                    </Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link href="/shop" className="link text-sm sm:text-base md:text-lg">
+                    <Link href="/shop" className="flex link text-sm sm:text-base md:text-lg items-center">
+                    <img src="/images/assets/shop.png" className="h-8 w-8 mr-2"></img>
                       Shop
                     </Link>
                   </li>
                   <li className="mb-2">
-                    <Link href="/about" className="link text-sm sm:text-base md:text-lg">
+                    <Link href="/about" className="flex link text-sm sm:text-base md:text-lg items-center">
+                    <img src="/images/assets/about.png" className="h-7 w-7"></img>
                       About
                     </Link>
                   </li>
