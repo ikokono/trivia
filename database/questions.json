@@ -1,1371 +1,1341 @@
 {
-  "english": [
-    {
-      "question": "What color is the sky usually?",
-      "answers": [
-        "Blue",
-        "Green",
-        "Red",
-        "Yellow"
-      ],
-      "correctAnswer": "Blue"
-    },
-    {
-      "question": "What animal says 'moo'?",
-      "answers": [
-        "Cat",
-        "Dog",
-        "Cow",
-        "Pig"
-      ],
-      "correctAnswer": "Cow"
-    },
-    {
-      "question": "What is the opposite of hot?",
-      "answers": [
-        "Cold",
-        "Warm",
-        "Spicy",
-        "Sweet"
-      ],
-      "correctAnswer": "Cold"
-    },
-    {
-      "question": "How many days are in a week?",
-      "answers": [
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
-      "correctAnswer": "7"
-    },
-    {
-      "question": "What shape is a pizza?",
-      "answers": [
-        "Circle",
-        "Square",
-        "Triangle",
-        "Rectangle"
-      ],
-      "correctAnswer": "Circle"
-    },
-    {
-      "question": "What is the name of the biggest planet in our solar system?",
-      "answers": [
-        "Mars",
-        "Jupiter",
-        "Saturn",
-        "Earth"
-      ],
-      "correctAnswer": "Jupiter"
-    },
-    {
-      "question": "What do you call a baby cow?",
-      "answers": [
-        "Pup",
-        "Kitten",
-        "Calf",
-        "Lamb"
-      ],
-      "correctAnswer": "Calf"
-    },
-    {
-      "question": "What color is a banana?",
-      "answers": [
-        "Red",
-        "Green",
-        "Yellow",
-        "Purple"
-      ],
-      "correctAnswer": "Yellow"
-    },
-    {
-      "question": "What do you call a person who fixes cars?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Mechanic",
-        "Chef"
-      ],
-      "correctAnswer": "Mechanic"
-    },
-    {
-      "question": "What is the capital of the United States?",
-      "answers": [
-        "New York",
-        "Washington D.C.",
-        "Los Angeles",
-        "Chicago"
-      ],
-      "correctAnswer": "Washington D.C."
-    },
-    {
-      "question": "What is the name of the animal that says 'meow'?",
-      "answers": [
-        "Dog",
-        "Cat",
-        "Bird",
-        "Fish"
-      ],
-      "correctAnswer": "Cat"
-    },
-    {
-      "question": "What is the name of the largest ocean on Earth?",
-      "answers": [
-        "Atlantic Ocean",
-        "Indian Ocean",
-        "Pacific Ocean",
-        "Arctic Ocean"
-      ],
-      "correctAnswer": "Pacific Ocean"
-    },
-    {
-      "question": "What do you call a group of fish?",
-      "answers": [
-        "Flock",
-        "Herd",
-        "School",
-        "Pack"
-      ],
-      "correctAnswer": "School"
-    },
-    {
-      "question": "What is the name of the first month of the year?",
-      "answers": [
-        "February",
-        "March",
-        "April",
-        "January"
-      ],
-      "correctAnswer": "January"
-    },
-    {
-      "question": "What color is a lemon?",
-      "answers": [
-        "Red",
-        "Green",
-        "Yellow",
-        "Orange"
-      ],
-      "correctAnswer": "Yellow"
-    },
-    {
-      "question": "What do you call a person who cuts hair?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Barber",
-        "Chef"
-      ],
-      "correctAnswer": "Barber"
-    },
-    {
-      "question": "What is the name of the animal that says 'woof'?",
-      "answers": [
-        "Cat",
-        "Dog",
-        "Bird",
-        "Fish"
-      ],
-      "correctAnswer": "Dog"
-    },
-    {
-      "question": "What is the name of the country where the Eiffel Tower is located?",
-      "answers": [
-        "Italy",
-        "France",
-        "Spain",
-        "Germany"
-      ],
-      "correctAnswer": "France"
-    },
-    {
-      "question": "What do you call a person who builds houses?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Builder",
-        "Chef"
-      ],
-      "correctAnswer": "Builder"
-    },
-    {
-      "question": "What is the name of the instrument with black and white keys?",
-      "answers": [
-        "Guitar",
-        "Drums",
-        "Piano",
-        "Violin"
-      ],
-      "correctAnswer": "Piano"
-    },
-    {
-      "question": "What is the name of the planet we live on?",
-      "answers": [
-        "Mars",
-        "Jupiter",
-        "Saturn",
-        "Earth"
-      ],
-      "correctAnswer": "Earth"
-    },
-    {
-      "question": "What is the name of the animal that says 'oink'?",
-      "answers": [
-        "Cat",
-        "Dog",
-        "Pig",
-        "Bird"
-      ],
-      "correctAnswer": "Pig"
-    },
-    {
-      "question": "What do you call a person who flies a plane?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Pilot",
-        "Chef"
-      ],
-      "correctAnswer": "Pilot"
-    },
-    {
-      "question": "What is the name of the animal that says 'quack'?",
-      "answers": [
-        "Cat",
-        "Dog",
-        "Duck",
-        "Bird"
-      ],
-      "correctAnswer": "Duck"
-    },
-    {
-      "question": "What is the name of the shape with four equal sides?",
-      "answers": [
-        "Circle",
-        "Square",
-        "Triangle",
-        "Rectangle"
-      ],
-      "correctAnswer": "Square"
-    },
-    {
-      "question": "What is the name of the month that comes after July?",
-      "answers": [
-        "June",
-        "August",
-        "September",
-        "October"
-      ],
-      "correctAnswer": "August"
-    },
-    {
-      "question": "What color is a strawberry?",
-      "answers": [
-        "Red",
-        "Green",
-        "Yellow",
-        "Purple"
-      ],
-      "correctAnswer": "Red"
-    },
-    {
-      "question": "What do you call a person who writes books?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Author",
-        "Chef"
-      ],
-      "correctAnswer": "Author"
-    },
-    {
-      "question": "What is the name of the animal that says 'tweet'?",
-      "answers": [
-        "Cat",
-        "Dog",
-        "Bird",
-        "Fish"
-      ],
-      "correctAnswer": "Bird"
-    },
-    {
-      "question": "What is the name of the country where the Great Wall of China is located?",
-      "answers": [
-        "Japan",
-        "Korea",
-        "China",
-        "India"
-      ],
-      "correctAnswer": "China"
-    },
-    {
-      "question": "What do you call a person who plays music?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Musician",
-        "Chef"
-      ],
-      "correctAnswer": "Musician"
-    },
-    {
-      "question": "What is the name of the animal that says 'neigh'?",
-      "answers": [
-        "Cat",
-        "Dog",
-        "Horse",
-        "Bird"
-      ],
-      "correctAnswer": "Horse"
-    },
-    {
-      "question": "What is the name of the season that comes after summer?",
-      "answers": [
-        "Spring",
-        "Fall",
-        "Winter",
-        "Summer"
-      ],
-      "correctAnswer": "Fall"
-    },
-    {
-      "question": "What color is a grape?",
-      "answers": [
-        "Red",
-        "Green",
-        "Purple",
-        "Orange"
-      ],
-      "correctAnswer": "Purple"
-    },
-    {
-      "question": "What do you call a person who makes clothes?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Tailor",
-        "Chef"
-      ],
-      "correctAnswer": "Tailor"
-    },
-    {
-      "question": "What is the name of the animal that says 'roar'?",
-      "answers": [
-        "Cat",
-        "Dog",
-        "Lion",
-        "Bird"
-      ],
-      "correctAnswer": "Lion"
-    },
-    {
-      "question": "What is the name of the month that comes after May?",
-      "answers": [
-        "April",
-        "June",
-        "July",
-        "August"
-      ],
-      "correctAnswer": "June"
-    },
-    {
-      "question": "What color is a pumpkin?",
-      "answers": [
-        "Red",
-        "Green",
-        "Orange",
-        "Purple"
-      ],
-      "correctAnswer": "Orange"
-    },
-    {
-      "question": "What do you call a person who cooks food?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Chef",
-        "Builder"
-      ],
-      "correctAnswer": "Chef"
-    },
-    {
-      "question": "What is the name of the animal that says 'baa'?",
-      "answers": [
-        "Cat",
-        "Dog",
-        "Sheep",
-        "Bird"
-      ],
-      "correctAnswer": "Sheep"
-    },
-    {
-      "question": "What is the name of the season that comes after winter?",
-      "answers": [
-        "Spring",
-        "Fall",
-        "Winter",
-        "Summer"
-      ],
-      "correctAnswer": "Spring"
-    },
-    {
-      "question": "What color is a cherry?",
-      "answers": [
-        "Red",
-        "Green",
-        "Yellow",
-        "Purple"
-      ],
-      "correctAnswer": "Red"
-    },
-    {
-      "question": "What do you call a person who writes songs?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Songwriter",
-        "Chef"
-      ],
-      "correctAnswer": "Songwriter"
-    },
-    {
-      "question": "What is the name of the animal that says 'ribbit'?",
-      "answers": [
-        "Cat",
-        "Dog",
-        "Frog",
-        "Bird"
-      ],
-      "correctAnswer": "Frog"
-    },
-    {
-      "question": "What is the name of the country where the Statue of Liberty is located?",
-      "answers": [
-        "Canada",
-        "Mexico",
-        "United States",
-        "England"
-      ],
-      "correctAnswer": "United States"
-    },
-    {
-      "question": "What do you call a person who cleans houses?",
-      "answers": [
-        "Doctor",
-        "Teacher",
-        "Housekeeper",
-        "Chef"
-      ],
-      "correctAnswer": "Housekeeper"
-    }
-  ],
-  "indonesian": [
-    {
-      "question": "Hewan apa yang terkenal dengan suaranya 'kokok'?",
-      "answers": [
-        "Kucing",
-        "Anjing",
-        "Ayam",
-        "Kuda"
-      ],
-      "correctAnswer": "Ayam"
-    },
-    {
-      "question": "Buah apa yang berwarna hijau dan memiliki rasa asam?",
-      "answers": [
-        "Mangga",
-        "Jeruk",
-        "Apel",
-        "Durian"
-      ],
-      "correctAnswer": "Jeruk"
-    },
-    {
-      "question": "Bulan apa yang merupakan bulan pertama dalam kalender Masehi?",
-      "answers": [
-        "Februari",
-        "Maret",
-        "Januari",
-        "Desember"
-      ],
-      "correctAnswer": "Januari"
-    },
-    {
-      "question": "Hewan apa yang terkenal dengan kemampuan melompat tinggi?",
-      "answers": [
-        "Kucing",
-        "Kelinci",
-        "Kuda",
-        "Gajah"
-      ],
-      "correctAnswer": "Kelinci"
-    },
-    {
-      "question": "Siapa presiden pertama Republik Indonesia?",
-      "answers": [
-        "Soekarno",
-        "Suharto",
-        "Megawati",
-        "Habibie"
-      ],
-      "correctAnswer": "Soekarno"
-    },
-    {
-      "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari bambu?",
-      "answers": [
-        "Suling",
-        "Rebab",
-        "Kendang",
-        "Gamelan"
-      ],
-      "correctAnswer": "Suling"
-    },
-    {
-      "question": "Nama hari apa yang berada di antara hari Selasa dan Kamis?",
-      "answers": [
-        "Senin",
-        "Rabu",
-        "Jumat",
-        "Sabtu"
-      ],
-      "correctAnswer": "Rabu"
-    },
-    {
-      "question": "Apa warna bendera Indonesia?",
-      "answers": [
-        "Merah Putih",
-        "Biru Putih",
-        "Kuning Merah",
-        "Hijau Putih"
-      ],
-      "correctAnswer": "Merah Putih"
-    },
-    {
-      "question": "Benda apa yang digunakan untuk menulis di atas kertas?",
-      "answers": [
-        "Pensil",
-        "Gunting",
-        "Penggaris",
-        "Lem"
-      ],
-      "correctAnswer": "Pensil"
-    },
-    {
-      "question": "Hewan apa yang terkenal dengan suaranya 'guk-guk'?",
-      "answers": [
-        "Kucing",
-        "Anjing",
-        "Ayam",
-        "Kuda"
-      ],
-      "correctAnswer": "Anjing"
-    },
-    {
-      "question": "Buah apa yang berwarna kuning dan memiliki rasa manis?",
-      "answers": [
-        "Mangga",
-        "Jeruk",
-        "Apel",
-        "Durian"
-      ],
-      "correctAnswer": "Mangga"
-    },
-    {
-      "question": "Bulan apa yang merupakan bulan ke-12 dalam kalender Masehi?",
-      "answers": [
-        "Februari",
-        "Maret",
-        "Januari",
-        "Desember"
-      ],
-      "correctAnswer": "Desember"
-    },
-    {
-      "question": "Hewan apa yang terkenal dengan kemampuan berenang cepat?",
-      "answers": [
-        "Kucing",
-        "Kelinci",
-        "Kuda",
-        "Ikan"
-      ],
-      "correctAnswer": "Ikan"
-    },
-    {
-      "question": "Siapa pahlawan nasional Indonesia yang terkenal dengan sebutan 'Pangeran Diponegoro'?",
-      "answers": [
-        "Soekarno",
-        "Suharto",
-        "Megawati",
-        "Diponegoro"
-      ],
-      "correctAnswer": "Diponegoro"
-    },
-    {
-      "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari kulit?",
-      "answers": [
-        "Suling",
-        "Rebab",
-        "Kendang",
-        "Gamelan"
-      ],
-      "correctAnswer": "Kendang"
-    },
-    {
-      "question": "Nama hari apa yang berada di antara hari Kamis dan Sabtu?",
-      "answers": [
-        "Senin",
-        "Rabu",
-        "Jumat",
-        "Minggu"
-      ],
-      "correctAnswer": "Jumat"
-    },
-    {
-      "question": "Apa warna bendera negara Amerika Serikat?",
-      "answers": [
-        "Merah Putih",
-        "Biru Putih",
-        "Kuning Merah",
-        "Hijau Putih"
-      ],
-      "correctAnswer": "Biru Putih"
-    },
-    {
-      "question": "Benda apa yang digunakan untuk memotong kertas?",
-      "answers": [
-        "Pensil",
-        "Gunting",
-        "Penggaris",
-        "Lem"
-      ],
-      "correctAnswer": "Gunting"
-    },
-    {
-      "question": "Hewan apa yang terkenal dengan suaranya 'miaw'?",
-      "answers": [
-        "Kucing",
-        "Anjing",
-        "Ayam",
-        "Kuda"
-      ],
-      "correctAnswer": "Kucing"
-    },
-    {
-      "question": "Buah apa yang berwarna merah dan memiliki rasa manis?",
-      "answers": [
-        "Mangga",
-        "Jeruk",
-        "Apel",
-        "Durian"
-      ],
-      "correctAnswer": "Apel"
-    },
-    {
-      "question": "Bulan apa yang merupakan bulan kedua dalam kalender Masehi?",
-      "answers": [
-        "Februari",
-        "Maret",
-        "Januari",
-        "Desember"
-      ],
-      "correctAnswer": "Februari"
-    },
-    {
-      "question": "Hewan apa yang terkenal dengan kemampuan terbang?",
-      "answers": [
-        "Kucing",
-        "Kelinci",
-        "Kuda",
-        "Burung"
-      ],
-      "correctAnswer": "Burung"
-    },
-    {
-      "question": "Siapa pahlawan nasional Indonesia yang terkenal dengan sebutan 'Cut Nyak Dien'?",
-      "answers": [
-        "Soekarno",
-        "Suharto",
-        "Megawati",
-        "Cut Nyak Dien"
-      ],
-      "correctAnswer": "Cut Nyak Dien"
-    },
-    {
-      "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari kayu?",
-      "answers": [
-        "Suling",
-        "Rebab",
-        "Kendang",
-        "Gamelan"
-      ],
-      "correctAnswer": "Rebab"
-    },
-    {
-      "question": "Nama hari apa yang berada di antara hari Sabtu dan Senin?",
-      "answers": [
-        "Senin",
-        "Rabu",
-        "Jumat",
-        "Minggu"
-      ],
-      "correctAnswer": "Minggu"
-    },
-    {
-      "question": "Apa warna bendera negara Jepang?",
-      "answers": [
-        "Merah Putih",
-        "Biru Putih",
-        "Kuning Merah",
-        "Hijau Putih"
-      ],
-      "correctAnswer": "Kuning Merah"
-    },
-    {
-      "question": "Benda apa yang digunakan untuk mengukur panjang?",
-      "answers": [
-        "Pensil",
-        "Gunting",
-        "Penggaris",
-        "Lem"
-      ],
-      "correctAnswer": "Penggaris"
-    },
-    {
-      "question": "Hewan apa yang terkenal dengan suaranya 'hee-haw'?",
-      "answers": [
-        "Kucing",
-        "Anjing",
-        "Ayam",
-        "Kuda"
-      ],
-      "correctAnswer": "Kuda"
-    },
-    {
-      "question": "Buah apa yang berwarna coklat dan memiliki rasa manis?",
-      "answers": [
-        "Mangga",
-        "Jeruk",
-        "Apel",
-        "Durian"
-      ],
-      "correctAnswer": "Durian"
-    },
-    {
-      "question": "Bulan apa yang merupakan bulan ketiga dalam kalender Masehi?",
-      "answers": [
-        "Februari",
-        "Maret",
-        "Januari",
-        "Desember"
-      ],
-      "correctAnswer": "Maret"
-    },
-    {
-      "question": "Hewan apa yang terkenal dengan kemampuan berlari cepat?",
-      "answers": [
-        "Kucing",
-        "Kelinci",
-        "Kuda",
-        "Ikan"
-      ],
-      "correctAnswer": "Kuda"
-    },
-    {
-      "question": "Siapa pahlawan nasional Indonesia yang terkenal dengan sebutan 'Raden Patah'?",
-      "answers": [
-        "Soekarno",
-        "Suharto",
-        "Megawati",
-        "Raden Patah"
-      ],
-      "correctAnswer": "Raden Patah"
-    },
-    {
-      "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari logam?",
-      "answers": [
-        "Suling",
-        "Rebab",
-        "Kendang",
-        "Gamelan"
-      ],
-      "correctAnswer": "Gamelan"
-    },
-    {
-      "question": "Nama hari apa yang berada di antara hari Minggu dan Selasa?",
-      "answers": [
-        "Senin",
-        "Rabu",
-        "Jumat",
-        "Sabtu"
-      ],
-      "correctAnswer": "Senin"
-    },
-    {
-      "question": "Apa warna bendera negara Italia?",
-      "answers": [
-        "Merah Putih",
-        "Biru Putih",
-        "Kuning Merah",
-        "Hijau Putih"
-      ],
-      "correctAnswer": "Hijau Putih"
-    },
-    {
-      "question": "Benda apa yang digunakan untuk menjahit pakaian?",
-      "answers": [
-        "Pensil",
-        "Gunting",
-        "Jarum",
-        "Lem"
-      ],
-      "correctAnswer": "Jarum"
-    },
-    {
-      "question": "Hewan apa yang terkenal dengan suaranya 'oink-oink'?",
-      "answers": [
-        "Kucing",
-        "Anjing",
-        "Ayam",
-        "Babi"
-      ],
-      "correctAnswer": "Babi"
-    },
-    {
-      "question": "Buah apa yang berwarna ungu dan memiliki rasa manis?",
-      "answers": [
-        "Mangga",
-        "Jeruk",
-        "Anggur",
-        "Durian"
-      ],
-      "correctAnswer": "Anggur"
-    },
-    {
-      "question": "Bulan apa yang merupakan bulan keempat dalam kalender Masehi?",
-      "answers": [
-        "Februari",
-        "Maret",
-        "April",
-        "Desember"
-      ],
-      "correctAnswer": "April"
-    },
-    {
-      "question": "Hewan apa yang terkenal dengan kemampuan memanjat pohon?",
-      "answers": [
-        "Kucing",
-        "Kelinci",
-        "Kuda",
-        "Monyet"
-      ],
-      "correctAnswer": "Monyet"
-    },
-    {
-      "question": "Siapa pahlawan nasional Indonesia yang terkenal dengan sebutan 'Sultan Agung'?",
-      "answers": [
-        "Soekarno",
-        "Suharto",
-        "Megawati",
-        "Sultan Agung"
-      ],
-      "correctAnswer": "Sultan Agung"
-    },
-    {
-      "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari tanah liat?",
-      "answers": [
-        "Suling",
-        "Rebab",
-        "Kendang",
-        "Gerabah"
-      ],
-      "correctAnswer": "Gerabah"
-    },
-    {
-      "question": "Nama hari apa yang berada di antara hari Selasa dan Kamis?",
-      "answers": [
-        "Senin",
-        "Rabu",
-        "Jumat",
-        "Sabtu"
-      ],
-      "correctAnswer": "Rabu"
-    },
-    {
-      "question": "Apa warna bendera negara Inggris?",
-      "answers": [
-        "Merah Putih",
-        "Biru Putih",
-        "Kuning Merah",
-        "Hijau Putih"
-      ],
-      "correctAnswer": "Merah Putih"
-    },
-    {
-      "question": "Benda apa yang digunakan untuk membersihkan rumah?",
-      "answers": [
-        "Pensil",
-        "Gunting",
-        "Sapu",
-        "Lem"
-      ],
-      "correctAnswer": "Sapu"
-    }
-  ],
-  "sports": [
-    {
-      "question": "Apa nama olahraga yang menggunakan raket dan kok?",
-      "answers": [
-        "Bulu Tangkis",
-        "Basket",
-        "Sepak Bola",
-        "Renang"
-      ],
-      "correctAnswer": "Bulu Tangkis"
-    },
-    {
-      "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Minions'?",
-      "answers": [
-        "Kevin Sanjaya Sukamuljo dan Marcus Fernaldi Gideon",
-        "Tontowi Ahmad dan Liliyana Natsir",
-        "Greysia Polii dan Apriyani Rahayu",
-        "Mohammad Ahsan dan Hendra Setiawan"
-      ],
-      "correctAnswer": "Kevin Sanjaya Sukamuljo dan Marcus Fernaldi Gideon"
-    },
-    {
-      "question": "Berapa pemain dalam satu tim sepak bola?",
-      "answers": [
-        "11",
-        "9",
-        "7",
-        "5"
-      ],
-      "correctAnswer": "11"
-    },
-    {
-      "question": "Apa nama stadion sepak bola terbesar di Indonesia?",
-      "answers": [
-        "Gelora Bung Karno",
-        "Manahan",
-        "Pakansari",
-        "Jalak Harupat"
-      ],
-      "correctAnswer": "Gelora Bung Karno"
-    },
-    {
-      "question": "Siapa pelatih Timnas Sepak Bola Indonesia saat ini?",
-      "answers": [
-        "Shin Tae-yong",
-        "Luis Milla",
-        "Alfred Riedl",
-        "Simon McMenemy"
-      ],
-      "correctAnswer": "Shin Tae-yong"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan papan seluncur dan salju?",
-      "answers": [
-        "Ski",
-        "Selancar",
-        "Renang",
-        "Skateboard"
-      ],
-      "correctAnswer": "Ski"
-    },
-    {
-      "question": "Siapa atlet bulutangkis Indonesia yang pernah menjadi juara dunia?",
-      "answers": [
-        "Tontowi Ahmad",
-        "Liliyana Natsir",
-        "Greysia Polii",
-        "Apriyani Rahayu"
-      ],
-      "correctAnswer": "Tontowi Ahmad"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-      "answers": [
-        "Basket",
-        "Bola Voli",
-        "Sepak Bola",
-        "Bulu Tangkis"
-      ],
-      "correctAnswer": "Basket"
-    },
-    {
-      "question": "Siapa atlet basket Indonesia yang terkenal?",
-      "answers": [
-        "Denny Sumargo",
-        "Andakara Prastawa",
-        "Abraham Damar Grahita",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan kuda dan pelana?",
-      "answers": [
-        "Equestrian",
-        "Balap Kuda",
-        "Lomba Lari",
-        "Lomba Renang"
-      ],
-      "correctAnswer": "Equestrian"
-    },
-    {
-      "question": "Siapa atlet renang Indonesia yang terkenal?",
-      "answers": [
-        "I Gusti Made Surya Negara",
-        "Triady Fauzi Sidiq",
-        "Glenn Victor Sutanto",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di air?",
-      "answers": [
-        "Polo Air",
-        "Renang",
-        "Loncat Indah",
-        "Selancar"
-      ],
-      "correctAnswer": "Polo Air"
-    },
-    {
-      "question": "Siapa atlet bulutangkis Indonesia yang pernah menjadi juara Olimpiade?",
-      "answers": [
-        "Tontowi Ahmad",
-        "Liliyana Natsir",
-        "Greysia Polii",
-        "Apriyani Rahayu"
-      ],
-      "correctAnswer": "Tontowi Ahmad"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan raket dan bola?",
-      "answers": [
-        "Tenis",
-        "Badminton",
-        "Sepak Bola",
-        "Bola Voli"
-      ],
-      "correctAnswer": "Tenis"
-    },
-    {
-      "question": "Siapa atlet tenis Indonesia yang terkenal?",
-      "answers": [
-        "Christopher Rungkat",
-        "Aldi Ilham",
-        "David Agung Susanto",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-      "answers": [
-        "Bola Voli",
-        "Sepak Bola",
-        "Basket",
-        "Bulu Tangkis"
-      ],
-      "correctAnswer": "Bola Voli"
-    },
-    {
-      "question": "Siapa atlet voli Indonesia yang terkenal?",
-      "answers": [
-        "Rivan Nurmulki",
-        "Nizar Zulfikar",
-        "Dio Zulfikri",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di atas meja?",
-      "answers": [
-        "Tenis Meja",
-        "Bulu Tangkis",
-        "Catur",
-        "Biliar"
-      ],
-      "correctAnswer": "Tenis Meja"
-    },
-    {
-      "question": "Siapa atlet tenis meja Indonesia yang terkenal?",
-      "answers": [
-        "Dessy Eria",
-        "Agnes Tirtawati",
-        "Clara Wiranusa",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan papan luncur dan air?",
-      "answers": [
-        "Selancar",
-        "Ski Air",
-        "Renang",
-        "Loncat Indah"
-      ],
-      "correctAnswer": "Selancar"
-    },
-    {
-      "question": "Siapa atlet selancar Indonesia yang terkenal?",
-      "answers": [
-        "Rio Waida",
-        "Oka Sulaksana",
-        "I Gusti Made Oka",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-      "answers": [
-        "Sepak Bola",
-        "Basket",
-        "Bola Voli",
-        "Bulu Tangkis"
-      ],
-      "correctAnswer": "Sepak Bola"
-    },
-    {
-      "question": "Siapa pemain sepak bola Indonesia yang terkenal?",
-      "answers": [
-        "Bambang Pamungkas",
-        "Boaz Solossa",
-        "Kurniawan Dwi Yulianto",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan kuda dan kereta?",
-      "answers": [
-        "Pacuan Kuda",
-        "Equestrian",
-        "Lomba Lari",
-        "Lomba Renang"
-      ],
-      "correctAnswer": "Pacuan Kuda"
-    },
-    {
-      "question": "Siapa atlet pacuan kuda Indonesia yang terkenal?",
-      "answers": [
-        "Jockey",
-        "Pelatih Kuda",
-        "Peternak Kuda",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan papan luncur dan roda?",
-      "answers": [
-        "Skateboard",
-        "Ski",
-        "Selancar",
-        "Renang"
-      ],
-      "correctAnswer": "Skateboard"
-    },
-    {
-      "question": "Siapa atlet skateboard Indonesia yang terkenal?",
-      "answers": [
-        "Andreas Aditya",
-        "Keenan Pearce",
-        "Pevi Permana",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-      "answers": [
-        "Bola Voli",
-        "Sepak Bola",
-        "Basket",
-        "Bulu Tangkis"
-      ],
-      "correctAnswer": "Bola Voli"
-    },
-    {
-      "question": "Siapa atlet voli Indonesia yang pernah menjadi juara dunia?",
-      "answers": [
-        "Rivan Nurmulki",
-        "Nizar Zulfikar",
-        "Dio Zulfikri",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-      "answers": [
-        "Basket",
-        "Bola Voli",
-        "Sepak Bola",
-        "Bulu Tangkis"
-      ],
-      "correctAnswer": "Basket"
-    },
-    {
-      "question": "Siapa atlet basket Indonesia yang pernah menjadi juara SEA Games?",
-      "answers": [
-        "Denny Sumargo",
-        "Andakara Prastawa",
-        "Abraham Damar Grahita",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-      "answers": [
-        "Sepak Bola",
-        "Basket",
-        "Bola Voli",
-        "Bulu Tangkis"
-      ],
-      "correctAnswer": "Sepak Bola"
-    },
-    {
-      "question": "Siapa pemain sepak bola Indonesia yang pernah bermain di Liga Inggris?",
-      "answers": [
-        "Eljero Elia",
-        "Ezra Walian",
-        "Stefano Lilipaly",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan raket dan bola?",
-      "answers": [
-        "Tenis",
-        "Badminton",
-        "Sepak Bola",
-        "Bola Voli"
-      ],
-      "correctAnswer": "Tenis"
-    },
-    {
-      "question": "Siapa atlet tenis Indonesia yang pernah menjadi juara Asian Games?",
-      "answers": [
-        "Christopher Rungkat",
-        "Aldi Ilham",
-        "David Agung Susanto",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan papan luncur dan air?",
-      "answers": [
-        "Selancar",
-        "Ski Air",
-        "Renang",
-        "Loncat Indah"
-      ],
-      "correctAnswer": "Selancar"
-    },
-    {
-      "question": "Siapa atlet selancar Indonesia yang pernah menjadi juara dunia?",
-      "answers": [
-        "Rio Waida",
-        "Oka Sulaksana",
-        "I Gusti Made Oka",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di atas meja?",
-      "answers": [
-        "Tenis Meja",
-        "Bulu Tangkis",
-        "Catur",
-        "Biliar"
-      ],
-      "correctAnswer": "Tenis Meja"
-    },
-    {
-      "question": "Siapa atlet tenis meja Indonesia yang pernah menjadi juara Olimpiade?",
-      "answers": [
-        "Dessy Eria",
-        "Agnes Tirtawati",
-        "Clara Wiranusa",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan papan luncur dan salju?",
-      "answers": [
-        "Ski",
-        "Selancar",
-        "Renang",
-        "Skateboard"
-      ],
-      "correctAnswer": "Ski"
-    },
-    {
-      "question": "Siapa atlet ski Indonesia yang terkenal?",
-      "answers": [
-        "Ski Alpin",
-        "Ski Cross",
-        "Freestyle Skiing",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-      "answers": [
-        "Bola Voli",
-        "Sepak Bola",
-        "Basket",
-        "Bulu Tangkis"
-      ],
-      "correctAnswer": "Bola Voli"
-    },
-    {
-      "question": "Siapa atlet voli Indonesia yang pernah menjadi juara SEA Games?",
-      "answers": [
-        "Rivan Nurmulki",
-        "Nizar Zulfikar",
-        "Dio Zulfikri",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    },
-    {
-      "question": "Apa nama olahraga yang menggunakan kuda dan pelana?",
-      "answers": [
-        "Equestrian",
-        "Balap Kuda",
-        "Lomba Lari",
-        "Lomba Renang"
-      ],
-      "correctAnswer": "Equestrian"
-    },
-    {
-      "question": "Siapa atlet equestrian Indonesia yang terkenal?",
-      "answers": [
-        "Akhmad Zulfikar",
-        "Ferry Pratama",
-        "Arie Sujono",
-        "Semua jawaban benar"
-      ],
-      "correctAnswer": "Semua jawaban benar"
-    }
-  ],
-  "undefined": [
-    {}
-  ]
+    "english": [
+        {
+            "question": "What color is the sky usually?",
+            "answers": [
+                "Blue",
+                "Green",
+                "Red",
+                "Yellow"
+            ],
+            "correctAnswer": "Blue"
+        },
+        {
+            "question": "What animal says 'moo'?",
+            "answers": [
+                "Cat",
+                "Dog",
+                "Cow",
+                "Pig"
+            ],
+            "correctAnswer": "Cow"
+        },
+        {
+            "question": "What is the opposite of hot?",
+            "answers": [
+                "Cold",
+                "Warm",
+                "Spicy",
+                "Sweet"
+            ],
+            "correctAnswer": "Cold"
+        },
+        {
+            "question": "How many days are in a week?",
+            "answers": [
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "correctAnswer": "7"
+        },
+        {
+            "question": "What shape is a pizza?",
+            "answers": [
+                "Circle",
+                "Square",
+                "Triangle",
+                "Rectangle"
+            ],
+            "correctAnswer": "Circle"
+        },
+        {
+            "question": "What is the name of the biggest planet in our solar system?",
+            "answers": [
+                "Mars",
+                "Jupiter",
+                "Saturn",
+                "Earth"
+            ],
+            "correctAnswer": "Jupiter"
+        },
+        {
+            "question": "What do you call a baby cow?",
+            "answers": [
+                "Pup",
+                "Kitten",
+                "Calf",
+                "Lamb"
+            ],
+            "correctAnswer": "Calf"
+        },
+        {
+            "question": "What color is a banana?",
+            "answers": [
+                "Red",
+                "Green",
+                "Yellow",
+                "Purple"
+            ],
+            "correctAnswer": "Yellow"
+        },
+        {
+            "question": "What do you call a person who fixes cars?",
+            "answers": [
+                "Doctor",
+                "Teacher",
+                "Mechanic",
+                "Chef"
+            ],
+            "correctAnswer": "Mechanic"
+        },
+        {
+            "question": "What is the capital of the United States?",
+            "answers": [
+                "New York",
+                "Washington D.C.",
+                "Los Angeles",
+                "Chicago"
+            ],
+            "correctAnswer": "Washington D.C."
+        },
+        {
+            "question": "What is the name of the animal that says 'meow'?",
+            "answers": [
+                "Dog",
+                "Cat",
+                "Bird",
+                "Fish"
+            ],
+            "correctAnswer": "Cat"
+        },
+        {
+            "question": "What is the name of the largest ocean on Earth?",
+            "answers": [
+                "Atlantic Ocean",
+                "Indian Ocean",
+                "Pacific Ocean",
+                "Arctic Ocean"
+            ],
+            "correctAnswer": "Pacific Ocean"
+        },
+        {
+            "question": "What do you call a group of fish?",
+            "answers": [
+                "Flock",
+                "Herd",
+                "School",
+                "Pack"
+            ],
+            "correctAnswer": "School"
+        },
+        {
+            "question": "What is the name of the first month of the year?",
+            "answers": [
+                "February",
+                "March",
+                "April",
+                "January"
+            ],
+            "correctAnswer": "January"
+        },
+        {
+            "question": "What color is a lemon?",
+            "answers": [
+                "Red",
+                "Green",
+                "Yellow",
+                "Orange"
+            ],
+            "correctAnswer": "Yellow"
+        },
+        {
+            "question": "What do you call a person who cuts hair?",
+            "answers": [
+                "Doctor",
+                "Teacher",
+                "Barber",
+                "Chef"
+            ],
+            "correctAnswer": "Barber"
+        },
+        {
+            "question": "What is the name of the animal that says 'woof'?",
+            "answers": [
+                "Cat",
+                "Dog",
+                "Bird",
+                "Fish"
+            ],
+            "correctAnswer": "Dog"
+        },
+        {
+            "question": "What is the name of the country where the Eiffel Tower is located?",
+            "answers": [
+                "Italy",
+                "France",
+                "Spain",
+                "Germany"
+            ],
+            "correctAnswer": "France"
+        },
+        {
+            "question": "What do you call a person who builds houses?",
+            "answers": [
+                "Doctor",
+                "Teacher",
+                "Builder",
+                "Chef"
+            ],
+            "correctAnswer": "Builder"
+        },
+        {
+            "question": "What is the name of the instrument with black and white keys?",
+            "answers": [
+                "Guitar",
+                "Drums",
+                "Piano",
+                "Violin"
+            ],
+            "correctAnswer": "Piano"
+        },
+        {
+            "question": "What is the name of the planet we live on?",
+            "answers": [
+                "Mars",
+                "Jupiter",
+                "Saturn",
+                "Earth"
+            ],
+            "correctAnswer": "Earth"
+        },
+        {
+            "question": "What is the name of the animal that says 'oink'?",
+            "answers": [
+                "Cat",
+                "Dog",
+                "Pig",
+                "Bird"
+            ],
+            "correctAnswer": "Pig"
+        },
+        {
+            "question": "What do you call a person who flies a plane?",
+            "answers": [
+                "Doctor",
+                "Teacher",
+                "Pilot",
+                "Chef"
+            ],
+            "correctAnswer": "Pilot"
+        },
+        {
+            "question": "What is the name of the animal that says 'quack'?",
+            "answers": [
+                "Cat",
+                "Dog",
+                "Duck",
+                "Bird"
+            ],
+            "correctAnswer": "Duck"
+        },
+        {
+            "question": "What is the name of the shape with four equal sides?",
+            "answers": [
+                "Circle",
+                "Square",
+                "Triangle",
+                "Rectangle"
+            ],
+            "correctAnswer": "Square"
+        },
+        {
+            "question": "What is the name of the month that comes after July?",
+            "answers": [
+                "June",
+                "August",
+                "September",
+                "October"
+            ],
+            "correctAnswer": "August"
+        },
+        {
+            "question": "What color is a strawberry?",
+            "answers": [
+                "Red",
+                "Green",
+                "Yellow",
+                "Purple"
+            ],
+            "correctAnswer": "Red"
+        },
+        {
+            "question": "What do you call a person who writes books?",
+            "answers": [
+                "Doctor",
+                "Teacher",
+                "Author",
+                "Chef"
+            ],
+            "correctAnswer": "Author"
+        },
+        {
+            "question": "What is the name of the animal that says 'tweet'?",
+            "answers": [
+                "Cat",
+                "Dog",
+                "Bird",
+                "Fish"
+            ],
+            "correctAnswer": "Bird"
+        },
+        {
+            "question": "What is the name of the country where the Great Wall of China is located?",
+            "answers": [
+                "Japan",
+                "Korea",
+                "China",
+                "India"
+            ],
+            "correctAnswer": "China"
+        },
+        {
+            "question": "What do you call a person who plays music?",
+            "answers": [
+                "Doctor",
+                "Teacher",
+                "Musician",
+                "Chef"
+            ],
+            "correctAnswer": "Musician"
+        },
+        {
+            "question": "What is the name of the animal that says 'neigh'?",
+            "answers": [
+                "Cat",
+                "Dog",
+                "Horse",
+                "Bird"
+            ],
+            "correctAnswer": "Horse"
+        },
+        {
+            "question": "What is the name of the season that comes after summer?",
+            "answers": [
+                "Spring",
+                "Fall",
+                "Winter",
+                "Summer"
+            ],
+            "correctAnswer": "Fall"
+        },
+        {
+            "question": "What color is a grape?",
+            "answers": [
+                "Red",
+                "Green",
+                "Purple",
+                "Orange"
+            ],
+            "correctAnswer": "Purple"
+        },
+        {
+            "question": "What do you call a person who makes clothes?",
+            "answers": [
+                "Doctor",
+                "Teacher",
+                "Tailor",
+                "Chef"
+            ],
+            "correctAnswer": "Tailor"
+        },
+        {
+            "question": "What is the name of the animal that says 'roar'?",
+            "answers": [
+                "Cat",
+                "Dog",
+                "Lion",
+                "Bird"
+            ],
+            "correctAnswer": "Lion"
+        },
+        {
+            "question": "What is the name of the month that comes after May?",
+            "answers": [
+                "April",
+                "June",
+                "July",
+                "August"
+            ],
+            "correctAnswer": "June"
+        },
+        {
+            "question": "What color is a pumpkin?",
+            "answers": [
+                "Red",
+                "Green",
+                "Orange",
+                "Purple"
+            ],
+            "correctAnswer": "Orange"
+        },
+        {
+            "question": "What do you call a person who cooks food?",
+            "answers": [
+                "Doctor",
+                "Teacher",
+                "Chef",
+                "Builder"
+            ],
+            "correctAnswer": "Chef"
+        },
+        {
+            "question": "What is the name of the animal that is known for its intelligence and ability to solve problems?",
+            "answers": [
+                "Cat",
+                "Dog",
+                "Dolphin",
+                "Bird"
+            ],
+            "correctAnswer": "Dolphin"
+        },
+        {
+            "question": "What is the name of the continent that is home to the Sahara Desert?",
+            "answers": [
+                "Asia",
+                "Europe",
+                "Africa",
+                "North America"
+            ],
+            "correctAnswer": "Africa"
+        },
+        {
+            "question": "What is the name of the season that comes after fall?",
+            "answers": [
+                "Winter",
+                "Spring",
+                "Summer",
+                "Fall"
+            ],
+            "correctAnswer": "Winter"
+        },
+        {
+            "question": "What color is a kiwi fruit?",
+            "answers": [
+                "Red",
+                "Green",
+                "Yellow",
+                "Brown"
+            ],
+            "correctAnswer": "Brown"
+        }
+    ],
+    "indonesian": [
+        {
+            "question": "Hewan apa yang terkenal dengan suaranya 'kokok'?",
+            "answers": [
+                "Kucing",
+                "Anjing",
+                "Ayam",
+                "Kuda"
+            ],
+            "correctAnswer": "Ayam"
+        },
+        {
+            "question": "Buah apa yang berwarna hijau dan memiliki rasa asam?",
+            "answers": [
+                "Mangga",
+                "Jeruk",
+                "Apel",
+                "Durian"
+            ],
+            "correctAnswer": "Jeruk"
+        },
+        {
+            "question": "Bulan apa yang merupakan bulan pertama dalam kalender Masehi?",
+            "answers": [
+                "Februari",
+                "Maret",
+                "Januari",
+                "Desember"
+            ],
+            "correctAnswer": "Januari"
+        },
+        {
+            "question": "Hewan apa yang terkenal dengan kemampuan melompat tinggi?",
+            "answers": [
+                "Kucing",
+                "Kelinci",
+                "Kuda",
+                "Gajah"
+            ],
+            "correctAnswer": "Kelinci"
+        },
+        {
+            "question": "Siapa presiden pertama Republik Indonesia?",
+            "answers": [
+                "Soekarno",
+                "Suharto",
+                "Megawati",
+                "Habibie"
+            ],
+            "correctAnswer": "Soekarno"
+        },
+        {
+            "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari bambu?",
+            "answers": [
+                "Suling",
+                "Rebab",
+                "Kendang",
+                "Gamelan"
+            ],
+            "correctAnswer": "Suling"
+        },
+        {
+            "question": "Nama hari apa yang berada di antara hari Selasa dan Kamis?",
+            "answers": [
+                "Senin",
+                "Rabu",
+                "Jumat",
+                "Sabtu"
+            ],
+            "correctAnswer": "Rabu"
+        },
+        {
+            "question": "Apa warna bendera Indonesia?",
+            "answers": [
+                "Merah Putih",
+                "Biru Putih",
+                "Kuning Merah",
+                "Hijau Putih"
+            ],
+            "correctAnswer": "Merah Putih"
+        },
+        {
+            "question": "Benda apa yang digunakan untuk menulis di atas kertas?",
+            "answers": [
+                "Pensil",
+                "Gunting",
+                "Penggaris",
+                "Lem"
+            ],
+            "correctAnswer": "Pensil"
+        },
+        {
+            "question": "Hewan apa yang terkenal dengan suaranya 'guk-guk'?",
+            "answers": [
+                "Kucing",
+                "Anjing",
+                "Ayam",
+                "Kuda"
+            ],
+            "correctAnswer": "Anjing"
+        },
+        {
+            "question": "Buah apa yang berwarna kuning dan memiliki rasa manis?",
+            "answers": [
+                "Mangga",
+                "Jeruk",
+                "Apel",
+                "Durian"
+            ],
+            "correctAnswer": "Mangga"
+        },
+        {
+            "question": "Bulan apa yang merupakan bulan ke-12 dalam kalender Masehi?",
+            "answers": [
+                "Februari",
+                "Maret",
+                "Januari",
+                "Desember"
+            ],
+            "correctAnswer": "Desember"
+        },
+        {
+            "question": "Hewan apa yang terkenal dengan kemampuan berenang cepat?",
+            "answers": [
+                "Kucing",
+                "Kelinci",
+                "Kuda",
+                "Ikan"
+            ],
+            "correctAnswer": "Ikan"
+        },
+        {
+            "question": "Siapa pahlawan nasional Indonesia yang terkenal dengan sebutan 'Pangeran Diponegoro'?",
+            "answers": [
+                "Soekarno",
+                "Suharto",
+                "Megawati",
+                "Diponegoro"
+            ],
+            "correctAnswer": "Diponegoro"
+        },
+        {
+            "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari kulit?",
+            "answers": [
+                "Suling",
+                "Rebab",
+                "Kendang",
+                "Gamelan"
+            ],
+            "correctAnswer": "Kendang"
+        },
+        {
+            "question": "Nama hari apa yang berada di antara hari Kamis dan Sabtu?",
+            "answers": [
+                "Senin",
+                "Rabu",
+                "Jumat",
+                "Minggu"
+            ],
+            "correctAnswer": "Jumat"
+        },
+        {
+            "question": "Apa warna bendera negara Amerika Serikat?",
+            "answers": [
+                "Merah Putih",
+                "Biru Putih",
+                "Kuning Merah",
+                "Hijau Putih"
+            ],
+            "correctAnswer": "Biru Putih"
+        },
+        {
+            "question": "Benda apa yang digunakan untuk memotong kertas?",
+            "answers": [
+                "Pensil",
+                "Gunting",
+                "Penggaris",
+                "Lem"
+            ],
+            "correctAnswer": "Gunting"
+        },
+        {
+            "question": "Hewan apa yang terkenal dengan suaranya 'miaw'?",
+            "answers": [
+                "Kucing",
+                "Anjing",
+                "Ayam",
+                "Kuda"
+            ],
+            "correctAnswer": "Kucing"
+        },
+        {
+            "question": "Buah apa yang berwarna merah dan memiliki rasa manis?",
+            "answers": [
+                "Mangga",
+                "Jeruk",
+                "Apel",
+                "Durian"
+            ],
+            "correctAnswer": "Apel"
+        },
+        {
+            "question": "Bulan apa yang merupakan bulan kedua dalam kalender Masehi?",
+            "answers": [
+                "Februari",
+                "Maret",
+                "Januari",
+                "Desember"
+            ],
+            "correctAnswer": "Februari"
+        },
+        {
+            "question": "Hewan apa yang terkenal dengan kemampuan terbang?",
+            "answers": [
+                "Kucing",
+                "Kelinci",
+                "Kuda",
+                "Burung"
+            ],
+            "correctAnswer": "Burung"
+        },
+        {
+            "question": "Siapa pahlawan nasional Indonesia yang terkenal dengan sebutan 'Cut Nyak Dien'?",
+            "answers": [
+                "Soekarno",
+                "Suharto",
+                "Megawati",
+                "Cut Nyak Dien"
+            ],
+            "correctAnswer": "Cut Nyak Dien"
+        },
+        {
+            "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari kayu?",
+            "answers": [
+                "Suling",
+                "Rebab",
+                "Kendang",
+                "Gamelan"
+            ],
+            "correctAnswer": "Rebab"
+        },
+        {
+            "question": "Nama hari apa yang berada di antara hari Sabtu dan Senin?",
+            "answers": [
+                "Senin",
+                "Rabu",
+                "Jumat",
+                "Minggu"
+            ],
+            "correctAnswer": "Minggu"
+        },
+        {
+            "question": "Apa warna bendera negara Jepang?",
+            "answers": [
+                "Merah Putih",
+                "Biru Putih",
+                "Kuning Merah",
+                "Hijau Putih"
+            ],
+            "correctAnswer": "Kuning Merah"
+        },
+        {
+            "question": "Benda apa yang digunakan untuk mengukur panjang?",
+            "answers": [
+                "Pensil",
+                "Gunting",
+                "Penggaris",
+                "Lem"
+            ],
+            "correctAnswer": "Penggaris"
+        },
+        {
+            "question": "Hewan apa yang terkenal dengan suaranya 'hee-haw'?",
+            "answers": [
+                "Kucing",
+                "Anjing",
+                "Ayam",
+                "Kuda"
+            ],
+            "correctAnswer": "Kuda"
+        },
+        {
+            "question": "Buah apa yang berwarna coklat dan memiliki rasa manis?",
+            "answers": [
+                "Mangga",
+                "Jeruk",
+                "Apel",
+                "Durian"
+            ],
+            "correctAnswer": "Durian"
+        },
+        {
+            "question": "Bulan apa yang merupakan bulan ketiga dalam kalender Masehi?",
+            "answers": [
+                "Februari",
+                "Maret",
+                "Januari",
+                "Desember"
+            ],
+            "correctAnswer": "Maret"
+        },
+        {
+            "question": "Hewan apa yang terkenal dengan kemampuan berlari cepat?",
+            "answers": [
+                "Kucing",
+                "Kelinci",
+                "Kuda",
+                "Ikan"
+            ],
+            "correctAnswer": "Kuda"
+        },
+        {
+            "question": "Siapa pahlawan nasional Indonesia yang terkenal dengan sebutan 'Raden Patah'?",
+            "answers": [
+                "Soekarno",
+                "Suharto",
+                "Megawati",
+                "Raden Patah"
+            ],
+            "correctAnswer": "Raden Patah"
+        },
+        {
+            "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari logam?",
+            "answers": [
+                "Suling",
+                "Rebab",
+                "Kendang",
+                "Gamelan"
+            ],
+            "correctAnswer": "Gamelan"
+        },
+        {
+            "question": "Nama hari apa yang berada di antara hari Minggu dan Selasa?",
+            "answers": [
+                "Senin",
+                "Rabu",
+                "Jumat",
+                "Sabtu"
+            ],
+            "correctAnswer": "Senin"
+        },
+        {
+            "question": "Apa warna bendera negara Italia?",
+            "answers": [
+                "Merah Putih",
+                "Biru Putih",
+                "Kuning Merah",
+                "Hijau Putih"
+            ],
+            "correctAnswer": "Hijau Putih"
+        },
+        {
+            "question": "Benda apa yang digunakan untuk menjahit pakaian?",
+            "answers": [
+                "Pensil",
+                "Gunting",
+                "Jarum",
+                "Lem"
+            ],
+            "correctAnswer": "Jarum"
+        },
+        {
+            "question": "Hewan apa yang terkenal dengan suaranya 'oink-oink'?",
+            "answers": [
+                "Kucing",
+                "Anjing",
+                "Ayam",
+                "Babi"
+            ],
+            "correctAnswer": "Babi"
+        },
+        {
+            "question": "Buah apa yang berwarna ungu dan memiliki rasa manis?",
+            "answers": [
+                "Mangga",
+                "Jeruk",
+                "Anggur",
+                "Durian"
+            ],
+            "correctAnswer": "Anggur"
+        },
+        {
+            "question": "Bulan apa yang merupakan bulan keempat dalam kalender Masehi?",
+            "answers": [
+                "Februari",
+                "Maret",
+                "April",
+                "Desember"
+            ],
+            "correctAnswer": "April"
+        },
+        {
+            "question": "Hewan apa yang terkenal dengan kemampuan memanjat pohon?",
+            "answers": [
+                "Kucing",
+                "Kelinci",
+                "Kuda",
+                "Monyet"
+            ],
+            "correctAnswer": "Monyet"
+        },
+        {
+            "question": "Siapa pahlawan nasional Indonesia yang terkenal dengan sebutan 'Sultan Agung'?",
+            "answers": [
+                "Soekarno",
+                "Suharto",
+                "Megawati",
+                "Sultan Agung"
+            ],
+            "correctAnswer": "Sultan Agung"
+        },
+        {
+            "question": "Apa nama alat musik tradisional Indonesia yang terbuat dari tanah liat?",
+            "answers": [
+                "Suling",
+                "Rebab",
+                "Kendang",
+                "Gerabah"
+            ],
+            "correctAnswer": "Gerabah"
+        },
+        {
+            "question": "Nama hari apa yang berada di antara hari Selasa dan Kamis?",
+            "answers": [
+                "Senin",
+                "Rabu",
+                "Jumat",
+                "Sabtu"
+            ],
+            "correctAnswer": "Rabu"
+        },
+        {
+            "question": "Apa warna bendera negara Inggris?",
+            "answers": [
+                "Merah Putih",
+                "Biru Putih",
+                "Kuning Merah",
+                "Hijau Putih"
+            ],
+            "correctAnswer": "Merah Putih"
+        },
+        {
+            "question": "Benda apa yang digunakan untuk membersihkan rumah?",
+            "answers": [
+                "Pensil",
+                "Gunting",
+                "Sapu",
+                "Lem"
+            ],
+            "correctAnswer": "Sapu"
+        }
+    ],
+    "sports": [
+        {
+            "question": "Apa nama olahraga yang menggunakan raket dan kok?",
+            "answers": [
+                "Bulu Tangkis",
+                "Basket",
+                "Sepak Bola",
+                "Renang"
+            ],
+            "correctAnswer": "Bulu Tangkis"
+        },
+        {
+            "question": "Siapa atlet bulutangkis Indonesia yang terkenal dengan julukan 'The Minions'?",
+            "answers": [
+                "Kevin Sanjaya Sukamuljo dan Marcus Fernaldi Gideon",
+                "Tontowi Ahmad dan Liliyana Natsir",
+                "Greysia Polii dan Apriyani Rahayu",
+                "Mohammad Ahsan dan Hendra Setiawan"
+            ],
+            "correctAnswer": "Kevin Sanjaya Sukamuljo dan Marcus Fernaldi Gideon"
+        },
+        {
+            "question": "Berapa pemain dalam satu tim sepak bola?",
+            "answers": [
+                "11",
+                "9",
+                "7",
+                "5"
+            ],
+            "correctAnswer": "11"
+        },
+        {
+            "question": "Apa nama stadion sepak bola terbesar di Indonesia?",
+            "answers": [
+                "Gelora Bung Karno",
+                "Manahan",
+                "Pakansari",
+                "Jalak Harupat"
+            ],
+            "correctAnswer": "Gelora Bung Karno"
+        },
+        {
+            "question": "Siapa pelatih Timnas Sepak Bola Indonesia saat ini?",
+            "answers": [
+                "Shin Tae-yong",
+                "Luis Milla",
+                "Alfred Riedl",
+                "Simon McMenemy"
+            ],
+            "correctAnswer": "Shin Tae-yong"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan papan seluncur dan salju?",
+            "answers": [
+                "Ski",
+                "Selancar",
+                "Renang",
+                "Skateboard"
+            ],
+            "correctAnswer": "Ski"
+        },
+        {
+            "question": "Siapa atlet bulutangkis Indonesia yang pernah menjadi juara dunia?",
+            "answers": [
+                "Tontowi Ahmad",
+                "Liliyana Natsir",
+                "Greysia Polii",
+                "Apriyani Rahayu"
+            ],
+            "correctAnswer": "Tontowi Ahmad"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "answers": [
+                "Basket",
+                "Bola Voli",
+                "Sepak Bola",
+                "Bulu Tangkis"
+            ],
+            "correctAnswer": "Basket"
+        },
+        {
+            "question": "Siapa atlet basket Indonesia yang terkenal?",
+            "answers": [
+                "Denny Sumargo",
+                "Andakara Prastawa",
+                "Abraham Damar Grahita",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan kuda dan pelana?",
+            "answers": [
+                "Equestrian",
+                "Balap Kuda",
+                "Lomba Lari",
+                "Lomba Renang"
+            ],
+            "correctAnswer": "Equestrian"
+        },
+        {
+            "question": "Siapa atlet renang Indonesia yang terkenal?",
+            "answers": [
+                "I Gusti Made Surya Negara",
+                "Triady Fauzi Sidiq",
+                "Glenn Victor Sutanto",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di air?",
+            "answers": [
+                "Polo Air",
+                "Renang",
+                "Loncat Indah",
+                "Selancar"
+            ],
+            "correctAnswer": "Polo Air"
+        },
+        {
+            "question": "Siapa atlet bulutangkis Indonesia yang pernah menjadi juara Olimpiade?",
+            "answers": [
+                "Tontowi Ahmad",
+                "Liliyana Natsir",
+                "Greysia Polii",
+                "Apriyani Rahayu"
+            ],
+            "correctAnswer": "Tontowi Ahmad"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan raket dan bola?",
+            "answers": [
+                "Tenis",
+                "Badminton",
+                "Sepak Bola",
+                "Bola Voli"
+            ],
+            "correctAnswer": "Tenis"
+        },
+        {
+            "question": "Siapa atlet tenis Indonesia yang terkenal?",
+            "answers": [
+                "Christopher Rungkat",
+                "Aldi Ilham",
+                "David Agung Susanto",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "answers": [
+                "Bola Voli",
+                "Sepak Bola",
+                "Basket",
+                "Bulu Tangkis"
+            ],
+            "correctAnswer": "Bola Voli"
+        },
+        {
+            "question": "Siapa atlet voli Indonesia yang terkenal?",
+            "answers": [
+                "Rivan Nurmulki",
+                "Nizar Zulfikar",
+                "Dio Zulfikri",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di atas meja?",
+            "answers": [
+                "Tenis Meja",
+                "Bulu Tangkis",
+                "Catur",
+                "Biliar"
+            ],
+            "correctAnswer": "Tenis Meja"
+        },
+        {
+            "question": "Siapa atlet tenis meja Indonesia yang terkenal?",
+            "answers": [
+                "Dessy Eria",
+                "Agnes Tirtawati",
+                "Clara Wiranusa",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan papan luncur dan air?",
+            "answers": [
+                "Selancar",
+                "Ski Air",
+                "Renang",
+                "Loncat Indah"
+            ],
+            "correctAnswer": "Selancar"
+        },
+        {
+            "question": "Siapa atlet selancar Indonesia yang terkenal?",
+            "answers": [
+                "Rio Waida",
+                "Oka Sulaksana",
+                "I Gusti Made Oka",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "answers": [
+                "Sepak Bola",
+                "Basket",
+                "Bola Voli",
+                "Bulu Tangkis"
+            ],
+            "correctAnswer": "Sepak Bola"
+        },
+        {
+            "question": "Siapa pemain sepak bola Indonesia yang terkenal?",
+            "answers": [
+                "Bambang Pamungkas",
+                "Boaz Solossa",
+                "Kurniawan Dwi Yulianto",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan kuda dan kereta?",
+            "answers": [
+                "Pacuan Kuda",
+                "Equestrian",
+                "Lomba Lari",
+                "Lomba Renang"
+            ],
+            "correctAnswer": "Pacuan Kuda"
+        },
+        {
+            "question": "Siapa atlet pacuan kuda Indonesia yang terkenal?",
+            "answers": [
+                "Jockey",
+                "Pelatih Kuda",
+                "Peternak Kuda",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan papan luncur dan roda?",
+            "answers": [
+                "Skateboard",
+                "Ski",
+                "Selancar",
+                "Renang"
+            ],
+            "correctAnswer": "Skateboard"
+        },
+        {
+            "question": "Siapa atlet skateboard Indonesia yang terkenal?",
+            "answers": [
+                "Andreas Aditya",
+                "Keenan Pearce",
+                "Pevi Permana",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "answers": [
+                "Bola Voli",
+                "Sepak Bola",
+                "Basket",
+                "Bulu Tangkis"
+            ],
+            "correctAnswer": "Bola Voli"
+        },
+        {
+            "question": "Siapa atlet voli Indonesia yang pernah menjadi juara dunia?",
+            "answers": [
+                "Rivan Nurmulki",
+                "Nizar Zulfikar",
+                "Dio Zulfikri",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "answers": [
+                "Basket",
+                "Bola Voli",
+                "Sepak Bola",
+                "Bulu Tangkis"
+            ],
+            "correctAnswer": "Basket"
+        },
+        {
+            "question": "Siapa atlet basket Indonesia yang pernah menjadi juara SEA Games?",
+            "answers": [
+                "Denny Sumargo",
+                "Andakara Prastawa",
+                "Abraham Damar Grahita",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "answers": [
+                "Sepak Bola",
+                "Basket",
+                "Bola Voli",
+                "Bulu Tangkis"
+            ],
+            "correctAnswer": "Sepak Bola"
+        },
+        {
+            "question": "Siapa pemain sepak bola Indonesia yang pernah bermain di Liga Inggris?",
+            "answers": [
+                "Eljero Elia",
+                "Ezra Walian",
+                "Stefano Lilipaly",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan raket dan bola?",
+            "answers": [
+                "Tenis",
+                "Badminton",
+                "Sepak Bola",
+                "Bola Voli"
+            ],
+            "correctAnswer": "Tenis"
+        },
+        {
+            "question": "Siapa atlet tenis Indonesia yang pernah menjadi juara Asian Games?",
+            "answers": [
+                "Christopher Rungkat",
+                "Aldi Ilham",
+                "David Agung Susanto",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan papan luncur dan air?",
+            "answers": [
+                "Selancar",
+                "Ski Air",
+                "Renang",
+                "Loncat Indah"
+            ],
+            "correctAnswer": "Selancar"
+        },
+        {
+            "question": "Siapa atlet selancar Indonesia yang pernah menjadi juara dunia?",
+            "answers": [
+                "Rio Waida",
+                "Oka Sulaksana",
+                "I Gusti Made Oka",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di atas meja?",
+            "answers": [
+                "Tenis Meja",
+                "Bulu Tangkis",
+                "Catur",
+                "Biliar"
+            ],
+            "correctAnswer": "Tenis Meja"
+        },
+        {
+            "question": "Siapa atlet tenis meja Indonesia yang pernah menjadi juara Olimpiade?",
+            "answers": [
+                "Dessy Eria",
+                "Agnes Tirtawati",
+                "Clara Wiranusa",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan papan luncur dan salju?",
+            "answers": [
+                "Ski",
+                "Selancar",
+                "Renang",
+                "Skateboard"
+            ],
+            "correctAnswer": "Ski"
+        },
+        {
+            "question": "Siapa atlet ski Indonesia yang terkenal?",
+            "answers": [
+                "Ski Alpin",
+                "Ski Cross",
+                "Freestyle Skiing",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "answers": [
+                "Bola Voli",
+                "Sepak Bola",
+                "Basket",
+                "Bulu Tangkis"
+            ],
+            "correctAnswer": "Bola Voli"
+        },
+        {
+            "question": "Siapa atlet voli Indonesia yang pernah menjadi juara SEA Games?",
+            "answers": [
+                "Rivan Nurmulki",
+                "Nizar Zulfikar",
+                "Dio Zulfikri",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan kuda dan pelana?",
+            "answers": [
+                "Equestrian",
+                "Balap Kuda",
+                "Lomba Lari",
+                "Lomba Renang"
+            ],
+            "correctAnswer": "Equestrian"
+        },
+        {
+            "question": "Siapa atlet equestrian Indonesia yang terkenal?",
+            "answers": [
+                "Akhmad Zulfikar",
+                "Ferry Pratama",
+                "Arie Sujono",
+                "Semua jawaban benar"
+            ],
+            "correctAnswer": "Semua jawaban benar"
+        }
+    ],
+    "undefined": [
+        {}
+    ]
 }
