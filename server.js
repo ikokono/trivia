@@ -195,7 +195,7 @@ app.prepare().then(() => {
       currentQuestion: null,
       questionIndex: 0,
       questions: shuffleArray(questionsDatabase[quizType] || questionsDatabase.sports),
-      totalQuestions: 3,
+      totalQuestions: 10,
       interval: null
     };
 
@@ -313,7 +313,7 @@ app.prepare().then(() => {
     players.sort((a, b) => b.correctAnswers - a.correctAnswers);
 
     // Tentukan koin per peringkat
-    const coinPerRank = [10, 8, 6, 4];
+    const coinPerRank = [1000, 800, 600, 400];
     const expPerRank = [100, 80, 60, 40];
 
     const coins = {}
@@ -322,7 +322,7 @@ app.prepare().then(() => {
     // Hitung dan perbarui koin untuk setiap pemain berdasarkan peringkat mereka
     players.forEach((player, index) => {
       const coinsEarned = coinPerRank[index] ? player.correctAnswers * coinPerRank[index] : 0;
-      const expEarned = expPerRank[index] ? expPerRank[index] : 0;
+      const expEarned = expPerRank[index] ? player.correctAnswers * expPerRank[index] : 0;
 
       updateCoinsInAPI(player.id, coinsEarned); // Update melalui API
       updateExpInAPI(player.id, expEarned);
@@ -341,7 +341,6 @@ app.prepare().then(() => {
       exp // Sisanya adalah kalah
     });
   };
-
 
   // Helper function to shuffle an array
   const shuffleArray = (array) => {

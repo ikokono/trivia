@@ -52,7 +52,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white">
+    <div className="flex justify-center items-center min-h-screen bg-gray-900 font-sans text-white">
       <motion.div 
         className="bg-gray-800 p-8 rounded-lg shadow-lg"
         initial={{ opacity: 0, scale: 0.8 }}

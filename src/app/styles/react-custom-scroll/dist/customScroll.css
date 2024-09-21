@@ -1,0 +1,28 @@
+/* app/styles/customScroll.css */
+.customScroll .scrollbar {
+    background: rgba(0, 0, 0, 0.1); /* Warna latar belakang scrollbar */
+    border-radius: 8px; /* Membuat sudut scrollbar bulat */
+}
+
+.customScroll .scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); /* Warna bagian yang dapat digeser */
+    border-radius: 8px;
+}
+
+/* Untuk PC: */
+@media (min-width: 768px) {
+    .customScroll {
+        /* Gaya khusus untuk scroll di desktop */
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
+
+/* Untuk mobile: */
+@media (max-width: 767px) {
+    .customScroll {
+        /* Gaya khusus untuk scroll di mobile */
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}

@@ -46,7 +46,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white">
+    <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white font-sans">
       <div className="bg-gray-800 p-6 rounded-lg w-80">
         <h1 className="text-2xl font-semibold mb-4 text-center">Welcome Back</h1>
         <form onSubmit={handleSubmit} className="space-y-4">

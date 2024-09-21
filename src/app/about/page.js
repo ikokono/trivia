@@ -32,13 +32,17 @@ const About = () => {
                     About Us<span>_</span>
                 </h1>
                 <p className="text-lg mb-4 font-sans">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed dictum, ipsum at cursus laoreet, urna magna viverra nunc, et vestibulum velit dui in metus. Donec bibendum, turpis ut dapibus dictum, leo quam elementum nisl, eget pharetra mi dolor non arcu. Integer tristique ligula sit amet bibendum fringilla. Ut imperdiet, justo at aliquet convallis, turpis lorem aliquam risus, id malesuada velit urna sed tortor. Phasellus efficitur libero non magna laoreet, nec cursus dui condimentum.
+                    Hey there! Welcome to our Trivia Game Project! We're <strong>Kelompok 2</strong>, and this is our super cool trivia game that we made as part of our school project.
+                    We’re all about creating a fun and interactive way for you to learn while having a blast!
                 </p>
                 <p className="text-lg mb-4 font-sans">
-                    Morbi ut lorem et nisl consectetur bibendum. Nullam ultricies gravida ligula, a volutpat ipsum bibendum sed. Quisque dapibus varius ex ac tincidunt. Integer nec fringilla ex. Sed pharetra vestibulum quam. Sed vulputate, urna et dictum vestibulum, turpis ex faucibus dui, eu vehicula lectus lectus non velit.
+                    So, why aren’t we using formal English? Well, <strong>we decided</strong> to keep things casual 'cause we want this game to be <strong>fun and relatable</strong>, especially for younger players like you. We’re aiming for a <strong>chill, friendly vibe</strong> while still teaching you something valuable along the way.
                 </p>
                 <p className="text-lg mb-4 font-sans">
-                    Vestibulum vehicula enim id ante dictum, sed venenatis orci elementum. Aliquam ac ligula a sapien pharetra malesuada. Duis euismod ipsum ut justo dapibus, sed consectetur velit feugiat. Praesent dictum, erat sit amet bibendum interdum, odio dolor fringilla est, sed vehicula ligula justo eget libero.
+                    In this game, you’ll answer trivia questions that test your language skills, fitness knowledge, and even some cool practical stuff from PKWU. We believe learning is way more fun when it feels like a game, so get ready to learn while you play!
+                </p>
+                <p className="text-lg mb-4 font-sans">
+                    Whether you're here to boost your brainpower or just have some fun, we hope our trivia game gives you both! Thanks for playing, and have an awesome time!
                 </p>
                 <div className="text-center mt-8 flex flex-row items-center justify-center space-x-1 font-sans pb-20">
                     <p className="text-lg">Made with</p>
@@ -52,6 +56,7 @@ const About = () => {
                     />
                 </div>
             </motion.div>
+
         </motion.div>
     );
 };

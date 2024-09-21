@@ -22,5 +22,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ['/', '/game', '/shop'], // Ganti dengan path yang perlu dilindungi
+  matcher: ['/', '/game', '/shop', "/profile", "/about"], // Ganti dengan path yang perlu dilindungi
 };

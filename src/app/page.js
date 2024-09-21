@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Loading from '../components/Loading';
 import "../../public/Page.style.css"
 import { useRouter } from "next/navigation";
+import DropdownMenu from '../components/DropdownMenu';
 
 export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
@@ -15,6 +16,7 @@ export default function Home() {
   const [username, setUsername] = useState(null);
   const [token, setToken] = useState(null);
   const audioRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
@@ -85,6 +87,14 @@ export default function Home() {
 
   const handleStart = () => {
     router.push("/game");
+
+    setIsLoading(true); // Aktifkan loading saat tombol Start ditekan
+
+    // Simulasikan penundaan untuk contoh ini (misalnya 2 detik)
+    setTimeout(() => {
+      setIsLoading(false); // Matikan loading setelah proses selesai
+      // Masukkan logika lain di sini, misalnya pindah halaman atau memulai game
+    }, 123000);
   };
 
   const handlePlayPause = () => {
@@ -118,7 +128,11 @@ export default function Home() {
         onClick={handlePlayPause}
         className="absolute top-4 right-4 bg-blue-500 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-600 transition duration-300"
       >
-        {isPlaying ? <img src="images/assets/pause.png" className="w-3 h-3"/> : <img src="images/assets/play.png" className="w-3 h-3"/>}
+        {isPlaying ? (
+          <img src="images/assets/pause.png" className="w-3 h-3" alt="Pause" />
+        ) : (
+          <img src="images/assets/play.png" className="w-3 h-3" alt="Play" />
+        )}
       </button>
 
       <audio ref={audioRef} src="/audio/Theme.mp3" preload="auto" loop />
@@ -135,7 +149,6 @@ export default function Home() {
           alt="Game Title"
           className="w-3/4 sm:w-1/2 lg:w-1/3 xl:w-1/4 mx-auto"
         />
-
       </motion.div>
 
       <motion.div
@@ -154,39 +167,23 @@ export default function Home() {
               src="/images/assets/start.png"
               className="w-20 h-auto sm:w-24 md:w-32 lg:w-30 xl:w-35 cursor-pointer"
               onClick={handleStart}
+              alt="Start"
             />
-
           </div>
           <nav className="mt-6">
             <ul className="flex flex-wrap space-x-4 justify-center">
-              {token && (
-                <>
-                  <li className="mb-2">
-                    <Link href="/profile/@me" className="flex link text-sm sm:text-base md:text-lg items-center">
-                    <img src="/images/assets/profile.png" className="h-9 w-9 mr-2"></img>
-                      Profile
-                    </Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link href="/shop" className="flex link text-sm sm:text-base md:text-lg items-center">
-                    <img src="/images/assets/shop.png" className="h-8 w-8 mr-2"></img>
-                      Shop
-                    </Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link href="/about" className="flex link text-sm sm:text-base md:text-lg items-center">
-                    <img src="/images/assets/about.png" className="h-7 w-7"></img>
-                      About
-                    </Link>
-                  </li>
-                </>
-              )}
+              {token && <DropdownMenu token={token} />}
             </ul>
           </nav>
-
         </div>
       </motion.div>
+
+      {/* Tampilkan animasi loading jika sedang loading */}
+      {isLoading && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+          <div className="loader">Loading...</div> {/* Ganti dengan spinner atau animasi yang diinginkan */}
+        </div>
+      )}
     </div>
   );
-
 }

@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Podium from './Podium'; // Pastikan path-nya benar sesuai struktur folder Anda
+import Rangkings from './Rankings'; // Pastikan path-nya benar sesuai struktur folder Anda
 import { useRouter } from "next/navigation";
 
 export default function MatchResult({ gameResult, gameOver, username }) {
@@ -127,6 +127,7 @@ export default function MatchResult({ gameResult, gameOver, username }) {
                 >
                   <p className="text-3xl md:text-6xl font-bold mb-5">You Received</p>
                   <div className="flex items-center ml-4">
+                    <img src='/images/assets/coin.gif' width="24" height="24" className={`ml-5`}/>
                     <span className={`text-yellow-400 font-semibold ml-2`}>{coins}</span>
                     <img src='/images/assets/exp.png' width="24" height="24" className={`ml-5`}/>
                     <span className={`text-green-400 font-semibold ml-2`}>{exp}</span>
@@ -145,7 +146,7 @@ export default function MatchResult({ gameResult, gameOver, username }) {
                 transition={{ duration: 1 }}
                 className="relative flex flex-col items-center"
               >
-                <Podium gameResult={gameResult} />
+                <Rangkings gameResult={gameResult} />
               </motion.div>
             )}
           </AnimatePresence>
