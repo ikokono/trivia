@@ -44,6 +44,9 @@ const About = () => {
                 <p className="text-lg mb-4 font-sans">
                     Whether you're here to boost your brainpower or just have some fun, we hope our trivia game gives you both! Thanks for playing, and have an awesome time!
                 </p>
+                <p className="text-lg mb-4 font-sans">
+                    Source Code: <a href='https://github.com/ikokono/trivia' target='_blank'>https://github.com/ikokono/trivia</a>
+                </p>
                 <div className="text-center mt-8 flex flex-row items-center justify-center space-x-1 font-sans pb-20">
                     <p className="text-lg">Made with</p>
                     <motion.img

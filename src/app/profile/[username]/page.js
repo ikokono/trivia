@@ -170,7 +170,7 @@ const ProfilePage = () => {
             >
                 <div className={`w-full max-w-lg relative ${isMobile ? 'mb-6' : 'mb-12'}`}>
                     <img
-                        src="/images/banner/banner_default.png"
+                        src={user.bannerUrl ? user.bannerUrl : "/images/banner/banner_default.png"}
                         alt="Banner"
                         className={`w-full ${isMobile ? 'h-32' : 'h-48'} object-cover rounded-lg`}
                     />
@@ -194,7 +194,7 @@ const ProfilePage = () => {
                     />
                 )}
     
-                <div className={`flex justify-center mb-4 font-sans text-center mt-2 ${isMobile ? 'mt-16' : ''}`}>
+                <div className={`flex justify-center mb-4 font-sans text-center mt-2 ${isMobile ? 'mt-20' : ''}`}>
                     {isUser ? (
                         !editMode ? (
                             <h1 className="text-xl font-bold">{user.username}</h1>

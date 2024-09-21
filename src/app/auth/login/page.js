@@ -5,6 +5,7 @@ import { setCookie } from 'nookies';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
 import WelcomeBack from '../../../components/WelcomeBack';
+import "../../styles/Auth.module.css"
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
@@ -51,7 +52,7 @@ export default function LoginPage() {
         <h1 className="text-2xl font-semibold mb-4 text-center">Welcome Back</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
-            <FontAwesomeIcon icon={faUser} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <i className="fa-solid fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
             <input
               type="text"
               placeholder="Username"
@@ -62,7 +63,7 @@ export default function LoginPage() {
             />
           </div>
           <div className="relative">
-            <FontAwesomeIcon icon={faLock} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <i className="fa-solid fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
             <input
               type="password"
               placeholder="Password"

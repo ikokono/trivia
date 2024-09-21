@@ -8,6 +8,7 @@ const ChangeAvatar = ({ userId, onClose, onAvatarSelected, user }) => {
     const [selectedAvatar, setSelectedAvatar] = useState(null);
     const [isCustomUpload, setIsCustomUpload] = useState(false);
     const [showModal, setShowModal] = useState(true);
+    const [isHaveCustomAvatar, setIsHaveCustomAvatar] = useState(null)
     const fileInputRef = useRef(null);
 
     const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
@@ -18,15 +19,36 @@ const ChangeAvatar = ({ userId, onClose, onAvatarSelected, user }) => {
                 const response = await fetch(`/api/user/items?id=${userId}`);
                 if (response.ok) {
                     const data = await response.json();
+    
+                    // Set avatars dengan data yang didapat
                     setAvatars(data.items);
+                    
+                    // Cek apakah user memiliki custom avatar dengan ID tertentu
+                    const hasCustomAvatar = data.items.some(item => item._id === '66e84bcff8d9d67550e9090f');
+    
+                    // Jika ada custom avatar, set flag isHaveCustomAvatar
+                    setIsHaveCustomAvatar(hasCustomAvatar);
+    
+                    // Jika ada custom avatar, hapus dari state avatars
+                    if (hasCustomAvatar) {
+                        // Filter avatars untuk menghapus item dengan ID tertentu
+                        const updatedAvatars = data.items.filter(item => item._id !== '66e84bcff8d9d67550e9090f');
+    
+                        // Update state dengan avatars yang sudah di-filter
+                        setAvatars(updatedAvatars);
+    
+                        console.log('Custom avatar removed from state');
+                    }
                 }
             } catch (error) {
                 console.error('Error fetching avatars:', error);
             }
         };
-
+    
         fetchAvatars();
     }, [userId]);
+        
+
 
     const handleCustomUploadClick = () => {
         setIsCustomUpload(true);
@@ -102,19 +124,22 @@ const ChangeAvatar = ({ userId, onClose, onAvatarSelected, user }) => {
                             <i className="fa-solid fa-xmark"></i>
                         </button>
                         <div className="flex flex-col items-center">
-                            <button
-                                className="bg-blue-500 text-white px-4 py-2 rounded-full mb-4"
-                                onClick={handleCustomUploadClick}
-                            >
-                                <i className="fa-solid fa-upload mr-1"></i>Custom Avatar
-                            </button>
-                            <input
-                                type="file"
-                                accept="image/*"
-                                onChange={handleFileUpload}
-                                className="hidden"
-                                ref={fileInputRef}
-                            />
+                            {isHaveCustomAvatar ? (
+                                <>
+                                    <button
+                                        className="bg-blue-500 text-white px-4 py-2 rounded-full mb-4"
+                                        onClick={handleCustomUploadClick}
+                                    >
+                                        <i className="fa-solid fa-upload mr-1"></i>Custom Avatar
+                                    </button>
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        onChange={handleFileUpload}
+                                        className="hidden"
+                                        ref={fileInputRef}
+                                    /></>
+                            ) : <></>}
                             <motion.div
                                 className={`flex ${isMobile ? 'overflow-x-scroll' : 'overflow-x-scroll'} space-x-2`}
                                 style={{ maxHeight: '60vh', overflowY: 'hidden' }}
