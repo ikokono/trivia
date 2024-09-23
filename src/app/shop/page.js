@@ -5,6 +5,7 @@ import nookies from 'nookies';
 import { jwtDecode } from "jwt-decode";
 import { WarningComponent, WarningYesButton } from '../../components/Dialog'; // Import komponen Warning
 import styles from '../styles/Shop.module.css';
+import { useRouter } from 'next/navigation';
 
 export default function ShopPage() {
     const [categories, setCategories] = useState([]);
@@ -15,6 +16,7 @@ export default function ShopPage() {
     const [showNotEnoughMoney, setShowNotEnoughMoney] = useState(false); // State untuk Warning
     const [selectedItem, setSelectedItem] = useState(null); // Item yang diklik
     const audioRef = useRef(null);
+    const router = useRouter()
 
     const cookies = nookies.get();
     const token = cookies.token || null;
@@ -88,6 +90,10 @@ export default function ShopPage() {
             console.error('Error buying item:', error);
         }
     };
+
+    function handlePurchaseClick() {
+        router.push("/pricing")
+    }
 
 
     useEffect(() => {
@@ -177,22 +183,34 @@ export default function ShopPage() {
                 <img src="/images/background/shop_background.gif" alt="Background GIF" className="object-cover w-full h-full" />
             </motion.div>
             <audio ref={audioRef} src="/audio/Theme_shop.mp3" preload="auto" loop />
-
+    
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-25"></div>
-
+    
             {/* Shop Container */}
             <div className="relative z-10 flex flex-col items-center justify-start h-screen text-white scrollable-hidden-scrollbar pb-6">
                 <h1 className="text-4xl font-bold mb-8 mt-20 font-retro">
                     <span className="text-white">Digi</span><span className="text-retroGreen">Dudes</span>
                 </h1>
-
-
+    
                 {/* Category Buttons */}
-                <div className="flex items-center">
-                    <img src='/images/assets/coin.gif' /><span className={`${styles.money} text-yellow-400 font-semibold ml-2`}>{profile.balance}</span>
+                <div className="flex flex-col items-center">
+                    <div className="flex items-center">
+                        <img src='/images/assets/coin.gif' />
+                        <span className={`${styles.money} text-yellow-400 font-semibold ml-2`}>
+                            {profile.balance}
+                        </span>
+                    </div>
+    
+                    {/* Purchase Button */}
+                    <button
+                        className="mt-4 bg-green-500 text-white font-semibold px-4 py-2 rounded hover:bg-green-600 transition"
+                        onClick={handlePurchaseClick}
+                    >
+                        Purchase
+                    </button>
                 </div>
-
+    
                 {/* Selected Category Items */}
                 <div className="w-4/5 md:w-2/3 lg:w-1/2 bg-gray-900 bg-opacity-80 p-8 rounded-lg mt-4">
                     <motion.div
@@ -221,10 +239,9 @@ export default function ShopPage() {
                             ))}
                         </div>
                     </motion.div>
-
                 </div>
             </div>
-
+    
             {/* Tampilkan komponen Warning jika diperlukan */}
             {showWarning && (
                 <WarningComponent
@@ -234,7 +251,7 @@ export default function ShopPage() {
                     onCancel={handleCancelAlertBuy}
                 />
             )}
-
+    
             {showNotEnoughMoney && (
                 <WarningYesButton
                     title={"Whoops!"}

@@ -1,0 +1,15 @@
+.scrollbar {
+    overflow: auto;
+}
+
+.scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Menyembunyikan scrollbar di browser berbasis Webkit */
+}
+
+.scrollbar {
+    -ms-overflow-style: none;
+    /* Untuk Internet Explorer dan Edge */
+    scrollbar-width: none;
+    /* Untuk Firefox */
+}
