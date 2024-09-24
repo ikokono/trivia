@@ -19,7 +19,7 @@ export default function PricingPage() {
 
   const calculatePrice = () => {
     const pricePer1000 = cryptoPrices[selectedCrypto];
-    return (pricePer1000 * (coinAmount / 1000)).toFixed(4);
+    return (pricePer1000 * (coinAmount / 1000)).toFixed(5);
   };
 
   const handleSelectAmount = (amount) => {

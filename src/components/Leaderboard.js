@@ -53,6 +53,12 @@ const Leaderboard = () => {
                         >
                             <div className="flex items-center">
                                 <span className="text-sm font-semibold text-gray-300 mr-4">{index + 1}.</span>
+                                <img
+                                    src={user.avatarUrl ? user.avatarUrl : "/images/avatar/avatar_default.png"} // Gambar profil user
+                                    alt={`${user.username} avatar`}
+                                    className="w-8 h-8 rounded-full mr-3 object-cover" // Tambahkan object-cover di sini
+                                />
+
                                 <span className="text-sm font-medium text-white">{user.username}</span>
                             </div>
                             <div className="text-xs text-gray-400 flex flex-col">

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { socket } from "../socket";
 import { motion } from 'framer-motion';
 import { jwtDecode } from "jwt-decode";
@@ -18,10 +18,31 @@ export default function Home() {
   const audioRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [playLobbyMusic, setPlayLobbyMusic] = useState(true)
   const router = useRouter();
 
   // State untuk Play/Pause button
   const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    // Load playLobbyMusic setting from localStorage when component mounts
+    const savedLobbyMusic = localStorage.getItem('playLobbyMusic');
+    if (savedLobbyMusic === 'true') {
+        setPlayLobbyMusic(true);
+    }
+
+    if (savedLobbyMusic === 'true') {
+        // Play lobby music if the setting is enabled
+        const audio = new Audio('/audio/Theme.mp3');
+        audio.loop = true;
+        audio.play();
+
+        return () => {
+            audio.pause();
+            audio.currentTime = 0; // Reset audio when component unmounts
+        };
+    }
+}, []);
 
   useEffect(() => {
     const fetchTokenAndUsername = async () => {
@@ -122,20 +143,6 @@ export default function Home() {
           className="background-gif object-cover w-full h-full"
         />
       </motion.div>
-
-      {/* Tombol Play/Pause di pojok kanan atas */}
-      <button
-        onClick={handlePlayPause}
-        className="absolute top-4 right-4 bg-blue-500 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-blue-600 transition duration-300"
-      >
-        {isPlaying ? (
-          <img src="images/assets/pause.png" className="w-3 h-3" alt="Pause" />
-        ) : (
-          <img src="images/assets/play.png" className="w-3 h-3" alt="Play" />
-        )}
-      </button>
-
-      <audio ref={audioRef} src="/audio/Theme.mp3" preload="auto" loop />
 
       <motion.div
         className="game-title-container flex justify-center mt-10 sm:mt-2"

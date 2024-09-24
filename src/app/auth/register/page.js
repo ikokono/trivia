@@ -12,14 +12,25 @@ export default function RegisterPage() {
   const [isRegistered, setIsRegistered] = useState(false);
   const router = useRouter();
 
+  // Tambahkan regex untuk validasi username
+  const usernameRegex = /^[a-z0-9][a-z0-9._]{1,11}[a-z0-9_]$/;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Cek apakah password dan konfirmasi password sama
     if (password !== confirmPassword) {
       alert('Passwords do not match');
       return;
     }
 
+    // Cek apakah username sesuai dengan regex
+    if (!usernameRegex.test(username)) {
+      alert('Invalid username. It must be 2-12 characters long and contain only lowercase letters, numbers, periods, or underscores.');
+      return;
+    }
+
+    // Lanjutkan dengan proses pendaftaran
     const res = await fetch('/api/auth/register', {
       method: 'POST',
       headers: {
@@ -45,7 +56,6 @@ export default function RegisterPage() {
       alert('Registration failed');
     }
   };
-
 
   if (isRegistered) {
     return <Welcome />;

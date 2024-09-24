@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'; // Import dari 'next/navigation' pada Next.js 13
 import Leaderboard from './Leaderboard'; // Pastikan path impor ini sesuai dengan lokasi file Leaderboard.js
+import Settings from './Settings'
 import Cookies from 'js-cookie'; // Import js-cookie
 
 const DropdownMenu = ({ token }) => {
     const [showSubmenu, setShowSubmenu] = useState(false);
     const [showLeaderboard, setShowLeaderboard] = useState(false);
+    const [showSettings, setShowSettings] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter(); // Menggunakan useRouter dari next/navigation
 
@@ -24,6 +26,14 @@ const DropdownMenu = ({ token }) => {
 
     const handleCloseLeaderboard = () => {
         setShowLeaderboard(false);
+    };
+
+    const handleShowSettings = () => {
+        setShowSettings(true);
+    };
+
+    const handleCloseSettings = () => {
+        setShowSettings(false);
     };
 
     // Fungsi untuk menangani klik link dan memunculkan loading
@@ -79,6 +89,10 @@ const DropdownMenu = ({ token }) => {
                                         <img src="/images/assets/about.png" className="h-7 w-7 mr-2" alt="About" />
                                         About
                                     </a>
+                                    <button onClick={handleShowSettings} className="flex items-center px-6 py-4 text-lg text-red hover:bg-gray-700">
+                                        <i className="fa-solid fa-gear mr-4"></i>
+                                        Settings
+                                    </button>
                                     <button onClick={handleLogout} className="flex items-center px-6 py-4 text-lg text-red hover:bg-gray-700">
                                         <i className="fa-solid fa-right-from-bracket mr-4"></i>
                                         Logout
@@ -93,7 +107,7 @@ const DropdownMenu = ({ token }) => {
             {/* Modal Leaderboard */}
             {showLeaderboard && (
                 <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50" onClick={handleCloseLeaderboard}>
-                    <div className="w-96 rounded-lg p-4 shadow-lg relative" onClick={(e) => e.stopPropagation()}>
+                    <div className="w-full max-w-xl rounded-lg p-4 shadow-lg relative" onClick={(e) => e.stopPropagation()}>
                         <button
                             className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
                             onClick={handleCloseLeaderboard}
@@ -103,6 +117,22 @@ const DropdownMenu = ({ token }) => {
                         <Leaderboard />
                     </div>
                 </div>
+
+            )}
+
+            {showSettings && (
+                <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50" onClick={handleShowSettings}>
+                    <div className="w-full max-w-xl rounded-lg p-4 shadow-lg relative" onClick={(e) => e.stopPropagation()}>
+                        <button
+                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+                            onClick={handleCloseSettings}
+                        >
+                            <i className="fa-solid fa-x"></i>
+                        </button>
+                        <Settings />
+                    </div>
+                </div>
+
             )}
 
             {/* Tampilkan animasi loading jika sedang loading */}

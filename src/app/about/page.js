@@ -39,7 +39,7 @@ const About = () => {
                     So, why aren’t we using formal English? Well, <strong>we decided</strong> to keep things casual 'cause we want this game to be <strong>fun and relatable</strong>, especially for younger players like you. We’re aiming for a <strong>chill, friendly vibe</strong> while still teaching you something valuable along the way.
                 </p>
                 <p className="text-lg mb-4 font-sans">
-                    In this game, you’ll answer trivia questions that test your language skills, fitness knowledge, and even some cool practical stuff from PKWU. We believe learning is way more fun when it feels like a game, so get ready to learn while you play!
+                    In this game, you’ll answer trivia questions that test your language skills, sports knowledge, and even some cool practical stuff from PKWU. We believe learning is way more fun when it feels like a game, so get ready to learn while you play!
                 </p>
                 <p className="text-lg mb-4 font-sans">
                     Whether you're here to boost your brainpower or just have some fun, we hope our trivia game gives you both! Thanks for playing, and have an awesome time!

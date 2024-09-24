@@ -79,9 +79,9 @@ export default function ShopPage() {
 
             // Perbarui state
             setProfile((prevProfile) => ({
-                ...prevProfile,
+                ...profile,
                 balance: newBalance,
-                items: [...prevProfile.items, itemId],
+                items: [...profile.items, itemId],
             }));
 
             alert(`Item ${selectedItem.name} purchased successfully!`);

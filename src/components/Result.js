@@ -20,7 +20,7 @@ export default function MatchResult({ gameResult, gameOver, username }) {
       const isWinner = gameResult.winner.username === username;
 
       // Set message based on whether the user is the winner or not
-      setShowMessage(isWinner ? 'Congratulations!' : 'You Lose');
+      setShowMessage(isWinner ? 'Slayyyy!' : 'Big L, Bro.');
 
       setCoins(gameResult.coins[username]); // Update coins when continuing
       setExp(gameResult.exp[username]); // Update coins when continuing
@@ -101,7 +101,7 @@ export default function MatchResult({ gameResult, gameOver, username }) {
             className="fixed inset-0 flex items-center justify-center z-50 p-4"
           >
             <h1
-              className={`text-4xl md:text-7xl font-bold ${showMessage === 'Congratulations!' ? 'text-green-500' : 'text-red-500'
+              className={`text-4xl md:text-7xl font-bold ${showMessage === 'Slayyyy!' ? 'text-green-500' : 'text-red-500'
                 }`}
             >
               {showMessage}
@@ -125,7 +125,7 @@ export default function MatchResult({ gameResult, gameOver, username }) {
                   className="p-4 rounded-lg flex flex-col"
                   style={{ transform: 'translateY(2%)' }}
                 >
-                  <p className="text-3xl md:text-6xl font-bold mb-5">You Received</p>
+                  <p className="text-3xl md:text-6xl font-bold mb-5">You Snagged</p>
                   <div className="flex items-center ml-4">
                     <img src='/images/assets/coin.gif' width="24" height="24" className={`ml-5`}/>
                     <span className={`text-yellow-400 font-semibold ml-2`}>{coins}</span>

@@ -122,7 +122,7 @@ app.prepare().then(() => {
         playersInQueue: matchmakingQueues[quizType].length
       });
 
-      if (matchmakingQueues[quizType].length >= 4) {
+      if (matchmakingQueues[quizType].length >= 2) {
         const roomId = `room_${Date.now()}`;
         const clientsInRoom = matchmakingQueues[quizType].splice(0, 4);
 
@@ -195,7 +195,7 @@ app.prepare().then(() => {
       currentQuestion: null,
       questionIndex: 0,
       questions: shuffleArray(questionsDatabase[quizType] || questionsDatabase.sports),
-      totalQuestions: 10,
+      totalQuestions: 2,
       interval: null
     };
 

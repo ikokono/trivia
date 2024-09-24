@@ -24,7 +24,7 @@ const Welcome = () => {
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.5, ease: isVisible ? 'easeInOut' : 'easeOut' }}
       >
-        Welcome!
+        Welcome To The Club 🍻!
       </motion.h1>
     </motion.div>
   );

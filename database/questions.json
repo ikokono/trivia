@@ -885,6 +885,56 @@
     ],
     "sports": [
         {
+            "question": "Di permainan Congklak, apa yang dipakai buat ngisi lubang-lubang kecil di papan",
+            "answers": [
+                "Kelereng",
+                "Biji",
+                "Kerikil",
+                "Koin"
+            ],
+            "correctAnswer": "Biji"
+        },
+        {
+            "question": "Mainan, mainan apa yang orangnya harus lempar benda pakai tali biar berputar?",
+            "answers": [
+                "Gasing",
+                "Egrang",
+                "Petak Umpet",
+                "Bekel"
+            ],
+            "correctAnswer": "Gasing"
+        },
+        {
+            "question": "Apa tujuan dari game Gobak Sodor?",
+            "answers": [
+                "Lompat paling tinggi",
+                "Ngelewatin garis defend lawan",
+                "Ngunpulin biji banyak",
+                "Mukul lawan pakai bola"
+            ],
+            "correctAnswer": "Ngelewatin garis defend lawan"
+        },
+        {
+            "question": "Di game \"Bakiak\", apa yang dipakai pemain di kakinya?",
+            "answers": [
+                "Sepatu Roda",
+                "Sandal Kayu",
+                "Sepatu Berpaku",
+                "Kain Pembungkus"
+            ],
+            "correctAnswer": "Sandal Kayu"
+        },
+        {
+            "question": "Apa mainan tradisional indonesia yang orangnya harus lompat penghalang?",
+            "answers": [
+                "Congklak",
+                "Benteng",
+                "Lompat Tali",
+                "Gobak Sodor"
+            ],
+            "correctAnswer": "Lompat Tali"
+        },
+        {
             "question": "Apa nama olahraga yang menggunakan raket dan kok?",
             "answers": [
                 "Bulu Tangkis",
@@ -945,7 +995,7 @@
             "correctAnswer": "Ski"
         },
         {
-            "question": "Siapa atlet bulutangkis Indonesia yang pernah menjadi juara dunia?",
+            "question": "Siapa atlet bulutangkis Indonesia yang pernah jadi juara dunia?",
             "answers": [
                 "Tontowi Ahmad",
                 "Liliyana Natsir",
@@ -955,47 +1005,27 @@
             "correctAnswer": "Tontowi Ahmad"
         },
         {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "question": "Tujuan utama game Bowling?",
+            "answers": [
+                "Jatuhin semua pin",
+                "Gol-in ke gawang lawan",
+                "Kumpulin bola banyak-banyak",
+                "Selesai dalam cepet-cepet"
+            ],
+            "correctAnswer": "Jatuhin semua pin"
+        },
+        {
+            "question": "Apa olahraga yang pakai bola dan dimainin pakai tangan di lapangan?",
             "answers": [
                 "Basket",
-                "Bola Voli",
+                "Bola Bowling",
                 "Sepak Bola",
-                "Bulu Tangkis"
+                "Bola bali nggo dolanan"
             ],
             "correctAnswer": "Basket"
         },
         {
-            "question": "Siapa atlet basket Indonesia yang terkenal?",
-            "answers": [
-                "Denny Sumargo",
-                "Andakara Prastawa",
-                "Abraham Damar Grahita",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan kuda dan pelana?",
-            "answers": [
-                "Equestrian",
-                "Balap Kuda",
-                "Lomba Lari",
-                "Lomba Renang"
-            ],
-            "correctAnswer": "Equestrian"
-        },
-        {
-            "question": "Siapa atlet renang Indonesia yang terkenal?",
-            "answers": [
-                "I Gusti Made Surya Negara",
-                "Triady Fauzi Sidiq",
-                "Glenn Victor Sutanto",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di air?",
+            "question": "Olahraga apa yang pake bola dan mainnya di air?",
             "answers": [
                 "Polo Air",
                 "Renang",
@@ -1005,157 +1035,77 @@
             "correctAnswer": "Polo Air"
         },
         {
-            "question": "Siapa atlet bulutangkis Indonesia yang pernah menjadi juara Olimpiade?",
+            "question": "Olahraga apa yang sering dimainkan di lapangan dengan net di tengah?",
             "answers": [
-                "Tontowi Ahmad",
-                "Liliyana Natsir",
-                "Greysia Polii",
-                "Apriyani Rahayu"
+                "Voli",
+                "Sepak Bola",
+                "Basket",
+                "Rugby"
             ],
-            "correctAnswer": "Tontowi Ahmad"
+            "correctAnswer": "Voli"
         },
         {
-            "question": "Apa nama olahraga yang menggunakan raket dan bola?",
+            "question": "Olahraga apa yang menggunakan raket dan bola kecil di lapangan?",
             "answers": [
                 "Tenis",
                 "Badminton",
-                "Sepak Bola",
-                "Bola Voli"
+                "Squash",
+                "Sepak Bola"
             ],
             "correctAnswer": "Tenis"
         },
         {
-            "question": "Siapa atlet tenis Indonesia yang terkenal?",
-            "answers": [
-                "Christopher Rungkat",
-                "Aldi Ilham",
-                "David Agung Susanto",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-            "answers": [
-                "Bola Voli",
-                "Sepak Bola",
-                "Basket",
-                "Bulu Tangkis"
-            ],
-            "correctAnswer": "Bola Voli"
-        },
-        {
-            "question": "Siapa atlet voli Indonesia yang terkenal?",
-            "answers": [
-                "Rivan Nurmulki",
-                "Nizar Zulfikar",
-                "Dio Zulfikri",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di atas meja?",
-            "answers": [
-                "Tenis Meja",
-                "Bulu Tangkis",
-                "Catur",
-                "Biliar"
-            ],
-            "correctAnswer": "Tenis Meja"
-        },
-        {
-            "question": "Siapa atlet tenis meja Indonesia yang terkenal?",
-            "answers": [
-                "Dessy Eria",
-                "Agnes Tirtawati",
-                "Clara Wiranusa",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan papan luncur dan air?",
-            "answers": [
-                "Selancar",
-                "Ski Air",
-                "Renang",
-                "Loncat Indah"
-            ],
-            "correctAnswer": "Selancar"
-        },
-        {
-            "question": "Siapa atlet selancar Indonesia yang terkenal?",
-            "answers": [
-                "Rio Waida",
-                "Oka Sulaksana",
-                "I Gusti Made Oka",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-            "answers": [
-                "Sepak Bola",
-                "Basket",
-                "Bola Voli",
-                "Bulu Tangkis"
-            ],
-            "correctAnswer": "Sepak Bola"
-        },
-        {
-            "question": "Siapa pemain sepak bola Indonesia yang terkenal?",
-            "answers": [
-                "Bambang Pamungkas",
-                "Boaz Solossa",
-                "Kurniawan Dwi Yulianto",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan kuda dan kereta?",
-            "answers": [
-                "Pacuan Kuda",
-                "Equestrian",
-                "Lomba Lari",
-                "Lomba Renang"
-            ],
-            "correctAnswer": "Pacuan Kuda"
-        },
-        {
-            "question": "Siapa atlet pacuan kuda Indonesia yang terkenal?",
-            "answers": [
-                "Jockey",
-                "Pelatih Kuda",
-                "Peternak Kuda",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan papan luncur dan roda?",
+            "question": "Apa nama olahraga yang melibatkan papan luncur dan roda di jalanan?",
             "answers": [
                 "Skateboard",
                 "Ski",
-                "Selancar",
-                "Renang"
+                "Sepeda",
+                "Selancar"
             ],
             "correctAnswer": "Skateboard"
         },
         {
-            "question": "Siapa atlet skateboard Indonesia yang terkenal?",
+            "question": "Olahraga apa yang sering dilakukan dengan berenang sejauh mungkin di kolam renang?",
             "answers": [
-                "Andreas Aditya",
-                "Keenan Pearce",
-                "Pevi Permana",
-                "Semua jawaban benar"
+                "Renang",
+                "Polo Air",
+                "Loncat Indah",
+                "Selancar"
             ],
-            "correctAnswer": "Semua jawaban benar"
+            "correctAnswer": "Renang"
         },
         {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "question": "Apa nama olahraga yang menggunakan raket kecil dan shuttlecock?",
+            "answers": [
+                "Badminton",
+                "Tenis",
+                "Squash",
+                "Tenis Meja"
+            ],
+            "correctAnswer": "Badminton"
+        },
+        {
+            "question": "Apa nama olahraga yang dimainkan di arena dan menggunakan sepatu roda?",
+            "answers": [
+                "Rollerblading",
+                "Ice Skating",
+                "Ski",
+                "Selancar"
+            ],
+            "correctAnswer": "Rollerblading"
+        },
+        {
+            "question": "Siapa atlet tinju dunia yang terkenal?",
+            "answers": [
+                "Michael Jackson",
+                "Mamat Gunshop",
+                "Jepri Nikol",
+                "Muhammad Ali"
+            ],
+            "correctAnswer": "Muhammad Ali"
+        },
+        {
+            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan hijau luas?",
             "answers": [
                 "Bola Voli",
                 "Sepak Bola",
@@ -1165,155 +1115,115 @@
             "correctAnswer": "Bola Voli"
         },
         {
-            "question": "Siapa atlet voli Indonesia yang pernah menjadi juara dunia?",
+            "question": "Siapa yang dikenal sebagai \"Jumpman\"",
             "answers": [
-                "Rivan Nurmulki",
-                "Nizar Zulfikar",
-                "Dio Zulfikri",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-            "answers": [
-                "Basket",
-                "Bola Voli",
-                "Sepak Bola",
-                "Bulu Tangkis"
+                "Ronaldo",
+                "Britney Spears",
+                "Michael Jordan",
+                "Nick Carter"
             ],
             "correctAnswer": "Basket"
         },
         {
-            "question": "Siapa atlet basket Indonesia yang pernah menjadi juara SEA Games?",
+            "question": "Apa nama olahraga yang pakai bola kecil dan dimainkan di lapangan rumput pakai tongkat?",
             "answers": [
-                "Denny Sumargo",
-                "Andakara Prastawa",
-                "Abraham Damar Grahita",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
-            "answers": [
-                "Sepak Bola",
-                "Basket",
-                "Bola Voli",
-                "Bulu Tangkis"
-            ],
-            "correctAnswer": "Sepak Bola"
-        },
-        {
-            "question": "Siapa pemain sepak bola Indonesia yang pernah bermain di Liga Inggris?",
-            "answers": [
-                "Eljero Elia",
-                "Ezra Walian",
-                "Stefano Lilipaly",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan raket dan bola?",
-            "answers": [
+                "Golf",
                 "Tenis",
-                "Badminton",
                 "Sepak Bola",
-                "Bola Voli"
+                "Hoki"
             ],
-            "correctAnswer": "Tenis"
+            "correctAnswer": "Golf"
         },
         {
-            "question": "Siapa atlet tenis Indonesia yang pernah menjadi juara Asian Games?",
+            "question": "Olahraga apa yang pakai tongkat buat mukul bola dan mainnya di lapangan yang bentuknya kayak berlian?",
             "answers": [
-                "Christopher Rungkat",
-                "Aldi Ilham",
-                "David Agung Susanto",
-                "Semua jawaban benar"
+                "Baseball",
+                "Softball",
+                "Kriket",
+                "Golf"
             ],
-            "correctAnswer": "Semua jawaban benar"
+            "correctAnswer": "Baseball"
         },
         {
-            "question": "Apa nama olahraga yang menggunakan papan luncur dan air?",
+            "question": "Olahraga apa yang pakai tongkat buat mukul bola dan mainnya di lapangan luas, mirip kayak baseball?",
             "answers": [
-                "Selancar",
-                "Ski Air",
-                "Renang",
-                "Loncat Indah"
+                "Kriket",
+                "Baseball",
+                "Softball",
+                "Golf"
             ],
-            "correctAnswer": "Selancar"
+            "correctAnswer": "Kriket"
         },
         {
-            "question": "Siapa atlet selancar Indonesia yang pernah menjadi juara dunia?",
-            "answers": [
-                "Rio Waida",
-                "Oka Sulaksana",
-                "I Gusti Made Oka",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di atas meja?",
-            "answers": [
-                "Tenis Meja",
-                "Bulu Tangkis",
-                "Catur",
-                "Biliar"
-            ],
-            "correctAnswer": "Tenis Meja"
-        },
-        {
-            "question": "Siapa atlet tenis meja Indonesia yang pernah menjadi juara Olimpiade?",
-            "answers": [
-                "Dessy Eria",
-                "Agnes Tirtawati",
-                "Clara Wiranusa",
-                "Semua jawaban benar"
-            ],
-            "correctAnswer": "Semua jawaban benar"
-        },
-        {
-            "question": "Apa nama olahraga yang menggunakan papan luncur dan salju?",
+            "question": "Olahraga apa yang mainnya di salju pakai papan panjang di kaki buat meluncur turun dari gunung?",
             "answers": [
                 "Ski",
                 "Selancar",
-                "Renang",
-                "Skateboard"
+                "Skateboard",
+                "Hoki Es"
             ],
             "correctAnswer": "Ski"
         },
         {
-            "question": "Siapa atlet ski Indonesia yang terkenal?",
+            "question": "Olahraga apa yang mainnya lempar bola ke gawang, tapi pakai tangan, bukan kaki?",
             "answers": [
-                "Ski Alpin",
-                "Ski Cross",
-                "Freestyle Skiing",
-                "Semua jawaban benar"
+                "Bola Tangan",
+                "Sepak Bola",
+                "Rugby",
+                "Basket"
             ],
-            "correctAnswer": "Semua jawaban benar"
+            "correctAnswer": "Bola Tangan"
         },
         {
-            "question": "Apa nama olahraga yang menggunakan bola dan dimainkan di lapangan?",
+            "question": "Olahraga apa yang pakai busur buat nembak panah ke target bulat?",
             "answers": [
-                "Bola Voli",
-                "Sepak Bola",
-                "Basket",
+                "Panahan",
+                "Menembak",
+                "Golf",
                 "Bulu Tangkis"
             ],
-            "correctAnswer": "Bola Voli"
+            "correctAnswer": "Panahan"
         },
         {
-            "question": "Siapa atlet voli Indonesia yang pernah menjadi juara SEA Games?",
+            "question": "Olahraga apa yang mainnya di atas meja hijau, pakai tongkat buat masukin bola ke lubang?",
             "answers": [
-                "Rivan Nurmulki",
-                "Nizar Zulfikar",
-                "Dio Zulfikri",
-                "Semua jawaban benar"
+                "Biliar",
+                "Bola Voli",
+                "Tenis Meja",
+                "Basket"
             ],
-            "correctAnswer": "Semua jawaban benar"
+            "correctAnswer": "Biliar"
         },
+        {
+            "question": "Olahraga apa yang mainnya mirip sepak bola, tapi bola lonjong dan bisa dipegang lari?",
+            "answers": [
+                "Rugby",
+                "Sepak Bola",
+                "Bola Tangan",
+                "Bola Basket"
+            ],
+            "correctAnswer": "Rugby"
+        },
+        {
+            "question": "Olahraga apa yang mainnya di atas es, pakai tongkat buat mukul keping kecil ke gawang?",
+            "answers": [
+                "Hoki Es",
+                "Selancar",
+                "Ski",
+                "Skateboard"
+            ],
+            "correctAnswer": "Hoki Es"
+        },
+        {
+            "question": "Olahraga apa yang mainnya adu kekuatan dan teknik untuk ngejat lawan ke matras?",
+            "answers": [
+                "Gulat",
+                "Judo",
+                "Karate",
+                "Tinju"
+            ],
+            "correctAnswer": "Gulat"
+        },        
         {
             "question": "Apa nama olahraga yang menggunakan kuda dan pelana?",
             "answers": [
@@ -1325,17 +1235,14 @@
             "correctAnswer": "Equestrian"
         },
         {
-            "question": "Siapa atlet equestrian Indonesia yang terkenal?",
+            "question": "Olahraga apa yang melibatkan hewan, di mana kamu bisa melaju cepat di atas punggung kuda?",
             "answers": [
-                "Akhmad Zulfikar",
-                "Ferry Pratama",
-                "Arie Sujono",
-                "Semua jawaban benar"
+                "Berkuda",
+                "Balap Kuda",
+                "Rodeo",
+                "Ski"
             ],
-            "correctAnswer": "Semua jawaban benar"
-        }
-    ],
-    "undefined": [
-        {}
+            "correctAnswer": "Berkuda"
+        }        
     ]
 }

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { socket } from '../../socket'; // pastikan path benar
 import 'tailwindcss/tailwind.css'; // Import Tailwind CSS
@@ -7,6 +7,7 @@ import MatchResult from '../../components/Result.js'
 import nookies from 'nookies';
 import { jwtDecode } from "jwt-decode";
 import { useRouter } from "next/navigation";
+import GameLeaderboard from "../../components/GameLeaderboard"
 
 export default function Game() {
   const [room, setRoom] = useState(null);
@@ -29,6 +30,27 @@ export default function Game() {
   const [token, setToken] = useState(null);
   const [coins, setCoins] = useState(0)
   const router = useRouter();
+  const [playGameMusic, setPlayGameMusic] = useState(true);
+
+  useEffect(() => {
+    // Load playGameMusic setting from localStorage when component mounts
+    const savedGameMusic = localStorage.getItem('playGameMusic');
+    if (savedGameMusic === 'true') {
+      setPlayGameMusic(true);
+    }
+
+    if (savedGameMusic === 'true') {
+      // Play game music if the setting is enabled
+      const audio = new Audio('/audio/Theme_quiz.mp3');
+      audio.loop = true;
+      audio.play();
+
+      return () => {
+        audio.pause();
+        audio.currentTime = 0; // Reset audio when component unmounts
+      };
+    }
+  }, []);
 
   useEffect(() => {
     const fetchTokenAndUsername = async () => {
@@ -173,7 +195,6 @@ export default function Game() {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen p-4 font-sans">
-      <audio ref={audioRef} src="/audio/Theme_quiz.mp3" preload="auto" loop />
       <AnimatePresence>
         {activeBackground && (
           <motion.div
@@ -196,7 +217,7 @@ export default function Game() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Select Quiz Type</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Smart Enough 🧐? You do you!</h3>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               {/* Button for English */}
               <motion.div
@@ -263,33 +284,33 @@ export default function Game() {
               <h2 className="text-lg sm:text-xl font-semibold mb-4">{quizType.toUpperCase()}</h2>
             )}
             {question && (
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-base sm:text-lg font-medium mb-4 text-black">{question.question}</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                  {answerOptions.map((answer, index) => (
-                    <motion.button
-                      key={index}
-                      className={`w-full py-2 px-4 rounded-lg text-white font-semibold ${selectedAnswer === answer ? 'bg-blue-500' : 'bg-gray-800'} hover:bg-blue-600 focus:outline-none`}
-                      onClick={() => handleAnswer(answer)}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      disabled={answered} // Disable button if already answered
-                    >
-                      {answer}
-                    </motion.button>
-                  ))}
+              <>
+                <GameLeaderboard leaderboard={leaderboard} />
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-base sm:text-lg font-medium mb-4 text-black">{question.question}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                    {answerOptions.map((answer, index) => (
+                      <motion.button
+                        key={index}
+                        className={`w-full py-2 px-4 rounded-lg text-white font-semibold ${selectedAnswer === answer ? 'bg-blue-500' : 'bg-gray-800'} hover:bg-blue-600 focus:outline-none`}
+                        onClick={() => handleAnswer(answer)}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        disabled={answered}
+                      >
+                        {answer}
+                      </motion.button>
+                    ))}
+                  </div>
+                  <p className="text-sm sm:text-lg text-black">Timer: {timer}s</p>
                 </div>
-                <p className="text-sm sm:text-lg text-black">Timer: {timer}s</p>
-              </div>
+              </>
             )}
-            {leaderboard && question &&  (
+            {!question && (
               <div className="mt-4">
-                {renderLeaderboard()}
+                <h3 className="text-lg sm:text-xl font-semibold">Players in Queue: {playersInQueue}</h3>
               </div>
             )}
-            <div className="mt-4">
-              <h3 className="text-lg sm:text-xl font-semibold">Players in Queue: {playersInQueue}</h3>
-            </div>
           </motion.div>
         )}
 
